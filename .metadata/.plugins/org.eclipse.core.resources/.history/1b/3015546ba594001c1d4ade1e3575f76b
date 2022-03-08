@@ -1,0 +1,4 @@
+var constraintDs_Itens1 = DatasetFactory.createConstraint('sqlLimit', '100', '100', ConstraintType.MUST);
+var datasetDs_Itens = DatasetFactory.getDataset('ds_Itens', null, new Array(constraintDs_Itens1), null);
+
+console.log('datasetDs_Itens',datasetDs_Itens)

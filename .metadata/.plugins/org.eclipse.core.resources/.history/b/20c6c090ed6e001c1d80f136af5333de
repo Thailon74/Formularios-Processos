@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Form</title>
+
+            <link rel="stylesheet" type="text/css" href="https://parkssa127265.fluig.cloudtotvs.com.br/style-guide/css/fluig-style-guide.min.css">
+            <script src="/resources/js/jquery/jquery.js"></script>
+            <script src="/resources/js/jquery/jquery-ui.min.js"></script>
+            <script src="/resources/js/mustache/mustache-min.js"></script>
+            <script src="/style-guide/js/fluig-style-guide.min.js"></script>
+
+            <!-- CUSTOM -->
+            <link href="/style-guide/css/fluig-style-guide-filter.min.css" rel="stylesheet" type="text/css">
+            <link href="/style-guide/css/fluig-style-guide-ratingstars.min.css" rel="stylesheet" type="text/css">
+            <script src="/style-guide/js/fluig-style-guide-filter.min.js"></script>
+            <script src="/style-guide/js/fluig-style-guide-ratingstars.min.js"></script>
+
+            <link href='/webdesk/customresources?cid=1&resourceName=temaFormulario/1.css' type='text/css' rel='stylesheet' />
+		</head>
+        <body class="fluig-style-guide">
+			
+			<form class="totvs-form grid vertical create-form-components ui-sortable t1" name="createFormComponents" style="padding-left: 10px; padding-right: 10px;"><img src="https://parkssa127265.fluig.cloudtotvs.com.br/portal/api/servlet/image/1/custom/logo_image.png" alt="Logo" id="logo" style="max-height: 60px; max-width: 140px;"><h1 class="title-form-application">Formulário solicitação de Pgto</h1><div class="paragraph-is-required system-message-information alert alert-info" role="alert">Todos os campos com * são de preenchimento obrigatório.</div>
+			<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="BoxSetor" style="position: relative; left: 0px; top: 0px;"><div class="form-input"><div class="form-group"><label>Setor </label><span class="required text-danger"><strong>*</strong></span><input type="text" class="form-control" name="BoxSetor" value="" placeholder="Setor emitente da solicitação" data-size="medium" required="required" style="width: 50%;"></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="BoxCNPJ" style="position: relative; left: 0px; top: 0px;"><div class="form-input"><div class="form-group"><label>CNPJ</label><span class="required text-danger"><strong>*</strong></span><input type="text" class="form-control" name="BoxCNPJ" value="" placeholder="CNPJ da empresa beneficiada" data-size="medium" mask="00.000.000/0000-00" maxlength="18" data-only-numbers="true" required="required" style="width: 50%;"></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="BoxEmpresa" style="position: relative; left: 0px; top: 0px;"><div class="form-input"><div class="form-group"><label>Empresa</label><input type="text" class="form-control" name="BoxEmpresa" value="" placeholder="Nome da empresa beneficiada" data-size="small" style="width: 25%;"></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="BoxDtPgto"><div class="form-input"><div class="form-group"><label>Data para pagamento</label><span class="required text-danger"><strong>*</strong></span><input type="text" class="form-control" name="BoxDtPgto" value="" placeholder="Data do vencimento" data-size="small" mask="00/00/0000" maxlength="10" data-only-numbers="true" required="required" style="width: 25%;"></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="BoxDtEmissao" style="position: relative; left: 0px; top: 0px;"><div class="form-input"><div class="form-group"><label>Data Emissão</label><span class="required text-danger"><strong>*</strong></span><input type="text" class="form-control" name="BoxDtEmissao" value="" placeholder="Data da emissão " data-size="small" mask="00/00/0000" maxlength="10" data-only-numbers="true" required="required" style="width: 25%;"></div></div></div><div class="form-field" data-type="tabledetail" data-show-properties="" data-field-name="Registro" style="position: relative; left: 0px; top: 0px;">
+		
+		
+		<div class="form-input"><div class="form-group">
+		<label>Registro</label>
+		<table tablename="tabledetailname1" class="table" noaddbutton="true">
+			<thead>
+				<tr class="tableHeadRow"><th class="tableColumn">Centro de custo</th><th class="tableColumn">Conta contábil</th><th class="tableColumn">Valor</th></tr>
+			</thead>
+			<tbody>
+				<tr class="tableBodyRow">
+	<td class="fs-v-align-middle">
+		<div class="form-input">
+			<input type="text" name="column1_1" class="form-control" label="Centro de custo">
+		</div>
+	</td>
+
+	<td class="fs-v-align-middle">
+		<div class="form-input">
+			<input type="text" name="column2_1" class="form-control" label="Conta contábil">
+		</div>
+	</td>
+
+	<td class="fs-v-align-middle">
+		<div class="form-input">
+			<input type="text" name="column3_1" class="form-control" label="Valor">
+		</div>
+	</td>
+</tr>
+			</tbody>
+		</table>
+		<button type="button" class="btn btn-primary" onclick="wdkAddChild('tabledetailname1')">Novo Registro</button>
+	</div></div>
+	</div>
+	<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="BoxValTotal" style="position: relative; left: 0px; top: 0px;">
+		<div class="form-input">
+			<div class="form-group">
+				<label>Valor total</label>
+				<span class="required text-danger">
+					<strong>*</strong>
+				</span>
+				<button onclick="clicar()">Resultado</button>
+                <p class="resultado"></p>
+				<input type="text" class="form-control" name="BoxValTotal" value="" placeholder="Valor total da compra" data-size="small" required="required" style="width: 25%;" mask="#00.000.000.000.000,00" maxlength="22" data-only-numbers="true">
+			</div>
+		</div>
+	</div>
+	<div class="form-field" data-type="textarea" data-show-properties="" data-field-name="BoxDesc">
+		<div class="form-input">
+			<div class="form-group">
+				<label>Descrição
+				</label>
+				<span class="required text-danger">
+					<strong>*</strong>
+				</span>
+				<textarea class="form-control" rows="3" name="BoxDesc" placeholder="Preencha a descrição da compra" data-size="big" required="required" style="width: 100%; margin: 0px -9.19922px 0px 0px; height: 162px;">
+				</textarea>
+			</div>
+		</div>
+	</div>
+	<div class="form-field" data-type="radio" data-show-properties="" data-field-name="forma_de_pagame" style="position: relative; left: 0px; top: 0px;">
+	<div class="form-input">
+	<div class="form-group">
+	<label>Forma de pagamento
+	</label>
+	<span class="required text-danger">
+	<strong>*</strong>
+	</span><div class="radio-options">
+	<div class="radio">
+	<label>
+	<input type="radio" name="forma_de_pagame" value="Boleto" required="required">
+	Boleto</label>
+	</div>
+	<div class="radio">
+	<label>
+	<input type="radio" name="forma_de_pagame" value="Depósito em conta" required="required">
+	Depósito em conta</label>
+	</div>
+	<div class="radio">
+	<label>
+	<input type="radio" name="forma_de_pagame" value="Cartão de crédito" required="required">
+	Cartão de crédito</label>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<div class="form-field" data-type="radio" data-show-properties="" data-field-name="BoxAprov" style="position: relative; left: 0px; top: 0px;">
+	<div class="form-input">
+	<div class="form-group">
+	<label>Aprovação</label>
+	<span class="required text-danger">
+	<strong>*</strong>
+	</span>
+	<div class="radio-options">
+	<div class="radio">
+	<label>
+	<input type="radio" name="BoxAprov" value="APROVADO" required="required">APROVADO</label>
+	</div>
+	<div class="radio">
+	<label>
+	<input type="radio" name="BoxAprov" value="RECUSADO" required="required">RECUSADO</label>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</form>
+		
+
+			<script type="text/javascript">
+				var keyDown = false, ctrl = 17, vKey = 86, Vkey = 118; 
+				  
+				$(document).keydown(function (e) {
+					if (e.keyCode == ctrl) keyDown = true;
+				}).keyup(function (e) {
+					if (e.keyCode == ctrl) keyDown = false;
+				});
+				
+				$('[data-only-numbers]').on('keypress', function (e) {
+				    if (!e) {
+					    var e = window.event;
+					}
+					
+				    if (e.keyCode > 0 && e.which == 0) {
+				    	 return true;
+					}
+					
+				    if (e.keyCode) {
+				        code = e.keyCode;
+					} else if (e.which) {
+				    	code = e.which;
+					}
+
+					if(code == 46) {
+						return true;
+					}
+					
+				    var character = String.fromCharCode(code);
+				    if (character == '\b' || character == ' ' || character == '\t') {
+				    	 return true;
+					}
+				    if (keyDown && (code == vKey || code == Vkey)) {
+				    	return (character);
+					} else  {
+						return (/[0-9]$/.test(character));
+					}
+				}).on('focusout', function (e) {
+				    var $this = $(this);
+					if($this.val() == "") {
+						return true;
+					}
+				    $this.val($this.val().replace(/[^0-9\.]/g, ''));
+				}).on('paste', function (e) {
+				    var $this = $(this);
+				    setTimeout(function () {
+				        $this.val($this.val().replace(/[^0-9\.]/g, ''));
+				    }, 5);
+				 });				
+
+				
+
+				$('.create-form-components').on('keyup', 'input[required="required"][type="text"], input[required="required"][type="number"], input[required="required"][type="date"], textarea[required="required"]', function(){
+					validationFieldsForm($(this), $(this).parents('.form-field').data('type'));
+				});
+
+				$('.create-form-components').on('change', 'input[required="required"][type="checkbox"], input[required="required"][type="radio"], select[required="required"]', function(){
+					validationFieldsForm($(this), $(this).parents('.form-field').data('type'));
+				});
+
+				function validationFieldsForm(field, type){
+					if(type === "checkbox" || type === "radio"){
+						if(!field.is(':checked')){
+							field.parents('.form-field').addClass('required');
+						}else{
+							field.parents('.form-field').removeClass('required');
+						}
+					}else{
+						if(!field.val().trim()){
+							field.parents('.form-field').addClass('required');
+						}else{
+							field.parents('.form-field').removeClass('required');
+						}
+					}
+				}
+
+				var $zoomPreview = $(".zoom-preview");
+				if ($zoomPreview.length) {
+                    $zoomPreview.parent().removeClass("input-group");
+                    $zoomPreview.remove();
+                }
+                
+                function clicar(){
+                	var num[50]=0;
+                	var int;
+                	var resultado = 0;
+                	
+                	for(int = 0; int < 50; int++){
+                		num[int] = document.querySelector(".column3_1").value;
+                		reusultado = resultado + parseInt(num);
+                	}
+                	
+                	document.querySelector(".resultado").innerHTML = resultado;
+                }
+
+				var ratings = $(".rating");
+				if (ratings.length > 0) ratingStars(ratings);
+				function ratingStars(stars) {
+					$.each(stars, function(i, obj) {
+                        var field = $(this).closest(".form-group").find(".rating-value");
+						var tgt = $(obj);
+						tgt.html("");
+						var rating = FLUIGC.stars(tgt, { value: field.val() });
+                        rating.on("click", function(o) {
+                            field.val($(this).index() + 1);
+                        });
+					});
+				}
+
+				$.each($("[data-date]"), function(i, o) {
+                    var id = $(o).attr("id");
+					FLUIGC.calendar("#" + id);
+				});
+
+				$(document).ready(function() {
+					$.each($("[data-date]"), function(i, o) {
+	                    var id = $(o).attr("id");
+	                    if($("#" + id).attr("readonly")) {
+	                    	$("#" + id).data('DateTimePicker').disable();
+	                    }
+					});
+				});
+			</script>
+		</body>
+	</html>

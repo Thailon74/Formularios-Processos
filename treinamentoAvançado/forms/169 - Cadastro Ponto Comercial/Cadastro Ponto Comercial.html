@@ -1,0 +1,294 @@
+<html>
+
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<div class="fluig-style-guide">
+		<form name="form" role="form">
+			<!-- campos ocultos -->
+			<input type="hidden" name="descritor" id="descritor">
+			<input type="hidden" name="id_responsavel_cadastro" id="id_responsavel_cadastro">
+			<input type="hidden" name="data_abertura_aux" id="data_abertura_aux">
+			<input type="hidden" name="id_solicitante" id="id_solicitante">
+			<input type="hidden" name="atividade_atual" id="atividade_atual" value="0">
+
+			<!-- painel dados gerais -->
+			<div class="panel panel-default dados_gerais">
+				<div class="panel-heading">Dados Gerais</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="numero_solicitacao">Número da Solicitação</label>
+							<input readonly type="text" class="form-control" id="numero_solicitacao"
+								name="numero_solicitacao">
+						</div>
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="solicitante">Solicitante</label>
+							<input readonly type="text" class="form-control" id="solicitante" name="solicitante">
+						</div>
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="data_abertura">Data de Abertura</label>
+							<input readonly type="text" class="form-control" id="data_abertura" name="data_abertura">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- dados cadastrais -->
+			<div class="panel panel-default dados_cadastrais">
+				<div class="panel-heading">Dados Cadastrais</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="razao_social">Razão Social</label>
+							<input required="required" type="text" class="form-control" id="razao_social"
+								name="razao_social">
+						</div>
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="nome_fantasia">Nome Fantasia</label>
+							<input type="text" class="form-control" id="nome_fantasia" name="nome_fantasia">
+						</div>
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="cnpj">CNPJ</label>
+							<input type="text" class="form-control" id="cnpj" name="cnpj">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="home_page">Home Page</label>
+							<input type="text" class="form-control" id="home_page" name="home_page">
+						</div>
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="cep">CEP</label>
+							<input type="text" class="form-control" id="cep" name="cep">
+						</div>
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="estado">Estado</label>
+							<!-- <input type="text" class="form-control" id="estado" name="estado"> -->
+							<select name="estado" id="estado" class="form-control" dataset="ds_EstadoBrasileiros"
+								datasetkey="Sigla" datasetvalue="Nome">
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="cidade">Cidade</label>
+							<input type="text" class="form-control" id="cidade" name="cidade">
+						</div>
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="bairro">Bairro</label>
+							<input type="text" class="form-control" id="bairro" name="bairro">
+						</div>
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="logradouro">Logradouro</label>
+							<input type="text" class="form-control" id="logradouro" name="logradouro">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="numero">Número</label>
+							<input type="text" class="form-control" id="numero" name="numero">
+						</div>
+						<div class="form-group col-md-8 col-xs-12">
+							<label for="info_adicional">Informações Adicionais</label>
+							<textarea class="form-control" id="info_adicional" name="info_adicional"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- informacoes de contato -->
+			<div class="panel panel-default informacoes_contato">
+				<div class="panel-heading">Informações de Contato</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-12 col-xs-12">
+							<table class="table table-condensed table-nonfluid table-striped" id="tb_info_contato"
+								tablename="tb_info_contato" noaddbutton="true" nodeletebutton="true">
+								<thead>
+									<tr>
+										<th class="col-md-4">Nome</th>
+										<th class="col-md-4">Telefone</th>
+										<th class="col-md-3">E-mail</th>
+										<th class="col-md-1"></th>
+										<!-- <th class="col-md-3">Idade</th> -->
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<input type="text" class="cl_nome form-control" id="tb_info_contato_nome"
+												name="tb_info_contato_nome">
+										</td>
+										<td>
+											<input type="text" class="cl_fone form-control" id="tb_info_contato_fone"
+												name="tb_info_contato_fone">
+										</td>
+										<td>
+											<input type="text" class="cl_email form-control" id="tb_info_contato_email"
+												name="tb_info_contato_email">
+										</td>
+										<td>
+											<button id="btn_add_contato" class="btn btn-danger"
+												onclick="Javascript:fnWdkRemoveChild(this)">Remover</button>
+										</td>
+										<!-- <td>
+											<input type="text" class="form-control classe_idade"
+												id="tb_info_contato_idade" name="tb_info_contato_idade">
+										</td> -->
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-xs-12" style="text-align: center;">
+							<button id="btn_add_contato" class="btn btn-primary"
+								onclick="wdkAddChild('tb_info_contato')">Adicionar
+								Contato</button>
+						</div>
+					</div>
+					<!-- <div class="row">
+						<div class="col-md-12 col-xs-12">
+							<button class="btn btn-success" onclick="calcularMediaIdade()">Calcular Média Idade</button>
+						</div>
+					</div> -->
+				</div>
+			</div>
+
+			<!-- painel obs visita ao local -->
+			<div class="panel panel-default obs_visita_local">
+				<div class="panel-heading">Obs. da Visita ao Local</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-12 col-xs-12">
+							<label for="obs_visita_local">Descreva aqui as suas impressões a respeito da visita ao
+								local</label>
+							<textarea class="form-control" id="obs_visita_local" name="obs_visita_local"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- painel orcamento -->
+			<div class="panel panel-default orcamento">
+				<div class="panel-heading">Orçamento</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="orc_material_divulgacao">Orçamento Material de Divulgação</label>
+							<input type="text" class="form-control" id="orc_material_divulgacao"
+								name="orc_material_divulgacao">
+						</div>
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="orc_cerimonia">Orçamento Cerimônia de Inauguração</label>
+							<input type="text" class="form-control" id="orc_cerimonia" name="orc_cerimonia">
+						</div>
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="tipo_producao_material">Tipo de Produção do Material</label>
+							<select class="form-control" name="tipo_producao_material" id="tipo_producao_material">
+								<option value="">Selecione...</option>
+								<option value="Interna">Interna</option>
+								<option value="Terceirizada">Terceirizada</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- painel aprovacao orcamento -->
+			<div class="panel panel-default aprovacao_orcamento">
+				<div class="panel-heading">Aprovação Orçamento</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="orc_aprovado">Orçamento Aprovado?</label>
+							<select class="form-control" name="orc_aprovado" id="orc_aprovado">
+								<option value="">Selecione...</option>
+								<option value="Sim">Sim</option>
+								<option value="Não">Não</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- painel marketing -->
+			<div class="panel panel-default marketing">
+				<div class="panel-heading">Marketing</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-12 col-xs-12">
+							<label for="obs_marketing">Obs. Marketing</label>
+							<textarea class="form-control" id="obs_marketing" name="obs_marketing"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- painel ti -->
+			<div class="panel panel-default ti">
+				<div class="panel-heading">TI</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-6 col-xs-12">
+							<label for="responsavel_cadastro">Responsável pelo Cadastro</label>
+							<input type="zoom" id="responsavel_cadastro" name="responsavel_cadastro" data-zoom="{
+								'displayKey':'colleagueName',
+								'datasetId':'colleague',
+								'maximumSelectionLength':'1',
+								'placeholder':'Selecione o responsável...',
+								'fields':[
+									{
+										'field':'colleagueId',
+										'label':'Id'
+									},
+									{
+										'field':'colleagueName',
+										'label':'Nome',
+										'standard':'true'
+									},{
+										'field':'login',
+										'label':'Login'
+									}
+								]
+							}" />
+						</div>
+						<div class="form-group col-md-6 col-xs-12">
+							<label for="status_cadastro">Como ocorreu o cadastro do Ponto Comercial?</label>
+							<select name="status_cadastro" id="status_cadastro" class="form-control"
+								dataset="ds_StatusCadastroPontoComercial" datasetkey="codigo"
+								datasetvalue="descricao"></select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12 col-xs-12">
+							<label for="obs_cadastro_ponto_comercial">Obs. Cadastro Ponto Comercial</label>
+							<textarea class="form-control" id="obs_cadastro_ponto_comercial"
+								name="obs_cadastro_ponto_comercial"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</form>
+	</div>
+</body>
+
+<!-- scripts customizados -->
+<script type="text/javascript" src="Zoom.js"></script>
+<script type="text/javascript" src="Custom.js"></script>
+
+<script>
+	var beforeSendValidate = function (numState, nextState) {
+		beforeSendValidateAux(numState, nextState)
+	}
+</script>
+
+</html>

@@ -1,0 +1,41 @@
+removerBotoes()
+
+function calcularTotal(){
+    let camposValores = $('.classe_valor').slice(1);
+    //let camposTratados = parseFloat(camposValores.replace(",","."));
+    let totalizador = 0;
+   
+    for (let i = 0; i < camposValores.length; i++){
+        let tmpValor = parseFloat(camposValores[i].value.replace(",","."))
+        console.log(tmpValor)
+        totalizador += tmpValor  
+
+    }
+    console.log(totalizador)
+        totalizador = parseFloat(totalizador.replace(".",","))
+    console.log(totalizador) 
+    $('#valor_total').val(totalizador)
+}
+
+function removerLinhaPaiFilho(elemento){
+
+    fnWdkRemoveChild(elemento)
+    calcularTotal()
+}
+
+function removerBotoes(){
+
+    var atividadeAtual = $('.cl_atividade_atual').val();
+
+    if (atividadeAtual == '0' || atividadeAtual == '5') {
+
+        $('#bt_nv_registro').show()
+       //$('#bt_remover').show()
+
+    }else{
+
+        //$('#bt_remover').hide()
+        $('#bt_nv_registro').hide()
+
+    }
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Form</title>
+
+	<link rel="stylesheet" type="text/css" href="/style-guide/css/fluig-style-guide.min.css">
+	<script src="/resources/js/jquery/jquery.js"></script>
+	<script src="/resources/js/jquery/jquery-ui.min.js"></script>
+	<script src="/resources/js/mustache/mustache-min.js"></script>
+	<script src="/style-guide/js/fluig-style-guide.min.js"></script>
+	<script type="text/javascript" src="/webdesk/vcXMLRPC.js" charset="utf-8"></script>
+
+	<!-- CUSTOM -->
+	<link href="/style-guide/css/fluig-style-guide-filter.min.css" rel="stylesheet" type="text/css">
+	<link href="/style-guide/css/fluig-style-guide-ratingstars.min.css" rel="stylesheet" type="text/css">
+	<script src="/style-guide/js/fluig-style-guide-filter.min.js"></script>
+	<script src="/style-guide/js/fluig-style-guide-ratingstars.min.js"></script>
+
+	<link href='/webdesk/customresources?cid=1&resourceName=temaFormulario/1.css' type='text/css' rel='stylesheet' />
+	
+</head>
+
+<body class="fluig-style-guide">
+
+	<form class="totvs-form grid vertical create-form-components ui-sortable " name="createFormComponents"
+		style="padding-left: 10px; padding-right: 10px;">
+		
+		<img src="https://parkssa127265.fluig.cloudtotvs.com.br/portal/api/servlet/image/1/custom/logo_image.png"
+			alt="Logo" id="logo" style="max-height: 60px; max-width: 140px;">
+		<br>
+		<!--Campos Ocultos-->
+		<input type="hidden" name="atividade_atual" id="atividade_atual" value="0">
+
+		<h1 class="title-form-application">Formulário solicitação de Pgto</h1>
+		<div class="row">
+			<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="BoxSetor"
+				style="position: relative; left: 0px; top: 0px;">
+				<div class="form-input">
+					<div class="form-group">
+						<div class="col-md-4">
+							<label>Setor </label>
+							<input type="text" class="form-control" id ="setor_emitente" name="setor_emitente" value=""
+								placeholder="Setor emitente da solicitação" data-size="medium">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="BoxCNPJ"
+				style="position: relative; left: 0px; top: 0px;">
+				<div class="form-input">
+					<div class="form-group">
+						<div class="col-md-4">
+							<label>CNPJ</label>
+							<input type="text" class="form-control" id="cnpj" name="cnpj" value=""
+								placeholder="CNPJ da empresa beneficiada" data-size="medium" mask="00.000.000/0000-00"
+								maxlength="18" data-only-numbers="true">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="BoxEmpresa"
+				style="position: relative; left: 0px; top: 0px;">
+				<div class="form-input">
+					<div class="form-group">
+						<div class="col-md-4">
+							<label>Empresa</label>
+							<input type="text" class="form-control" id="empresa" name="empresa" value=""
+								placeholder="Nome da empresa beneficiada" data-size="small">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="BoxDtPgto">
+				<div class="form-input">
+					<div class="form-group">
+						<div class="col-md-2">
+							<label>Data pagamento</label>
+							<input type="text" class="form-control" id="dt_venc" name="dt_venc" value=""
+								placeholder="Data do vencimento" data-size="small" mask="00/00/0000" maxlength="10"
+								data-only-numbers="true">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="BoxDtEmissao"
+				style="position: relative; left: 0px; top: 0px;">
+				<div class="form-input">
+					<div class="form-group">
+						<div class="col-md-2">
+							<label>Data Emissão</label>
+							<input type="text" class="form-control" id="dt_emissao" name="dt_emissao" value=""
+								placeholder="Data da emissão " data-size="small" mask="00/00/0000" maxlength="10"
+								data-only-numbers="true">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="form-field" data-type="tabledetail" data-show-properties="" data-field-name="Registro"
+			style="position: relative; left: 0px; top: 0px;">
+
+			<div class="form-input">
+				<div class="form-group">
+					<label>Registro</label>
+					<table tablename="tabledetailname" id="tabledetailname" class="table" noaddbutton="true" nodeletebutton="false" customFnDelete="fnCustomDelete(this)">
+						<thead>
+							<tr class="tableHeadRow">
+								<th class="tableColumn col-md-4">Centro de custo</th>
+								<th class="tableColumn col-md-4">Conta contábil</th>
+								<th class="tableColumn col-md-4">Valor</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="tableBodyRow">
+								<td class="fs-v-align-middle">
+									<div class="form-input">
+										<input type="zoom" data-size="big" class="cl_cc form-control" name="centro_custo" id="centro_custo" 
+									data-zoom="{
+										'displayKey':'Centro de Custo',
+										'datasetId':'ds_centrodecusto',
+										'placeholder':'Escolha o centro de custo',
+										'maximumSelectionLength':'10',
+										'fields':[{'field':'Centro de Custo',
+													'label':'Centro de Custo'
+											}]}">
+									</div>
+								</td>
+
+								<td class="fs-v-align-middle">
+									<div class="form-input">
+										<input type="zoom" data-size="big" class="cl_conta form-control" name="conta_contabil" id="conta_contabil" 
+									data-zoom="{
+										'displayKey':'Conta Contabil',
+										'datasetId':'ds_contacontabil',
+										'placeholder':'Escolha a conta contábil',
+										'maximumSelectionLength':'10',
+										'fields':[{'field':'Conta Contabil',
+													'label':'Conta Contabil'
+											}]}">
+									</div>
+								</td>
+
+								<td class="fs-v-align-middle">
+									<div class="form-input">
+										<div class="input-group">
+											<span class="input-group-addon">R$</span>
+											<input type="text" id="valor" name="valor" class="moeda cl_valor form-control" onchange="calcularTotal()" label="Valor" mask="000.000.000.000,00">
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<button type="button" id='bt_nv_registro' class="btn btn-primary" onclick="wdkAddChild('tabledetailname')"> Novo Registro</button>
+				</div>
+			</div>
+		</div>
+		<div class="form-field " data-type="textbox" data-show-properties="" data-field-name="BoxValTotal">
+			<div class="form-input">
+				<div class=" row form-group has-success">
+					<div class="col-md-4">
+						<label>Valor total</label>
+						<div class="input-group">
+						<!--<span class="input-group-addon">R$</span>-->
+						<input readonly type="text" class="moeda val_total form-control" id="valor_total" value=" " name="BoxValTotal"
+							placeholder="Valor total da compra" data-size="small">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="form-field" data-type="textarea" data-show-properties="" data-field-name="BoxDesc">
+			<div class="form-input">
+				<div class="form-group">
+					<label>Descrição
+					</label>
+					<textarea class="form-control" rows="5" id="descricao" name="descricao"></textarea>
+				</div>
+			</div>
+		</div>
+		<div >
+			<div class="form-input">
+				<div class="form-group">
+					<div class="testeInput row">
+						<div class="col-md-2">
+							<label>Forma de pagamento</label>
+							<select class="form-control" id="forma_pagamento" name="forma_pagamento" onchange="aperecerContaAgencia()">
+								<option value="1">Selecione</option >
+								<option value="2">Boleto</option >
+								<option value="3">Depósito em conta</option >
+								<option value="4">Cartão de crédito</option >
+								<option value="5">PIX</option>
+							</select>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		<div >
+			<div class="form-input">
+				<div class="form-group">
+					<label>Aprovação</label>
+					<div class="row">
+						<div class="col-md-2">
+							<select class="form-control" id="aprov" name="aprov">
+								<option>Selecione</option>
+								<option>Aprovado</option>
+								<option>Reprovado</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</body>
+<script type="text/javascript" src="Custom.js"></script>
+
+<script>
+	var beforeSendValidate = function (numState, nextState) {
+		beforeSendValidateAux(numState, nextState)
+	}
+</script>
+
+</html>

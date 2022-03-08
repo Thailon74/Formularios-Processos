@@ -1,0 +1,43 @@
+var mensagemErro = 'Preencha os campos abaixo para prosseguir:\n'
+var erro = false
+var formGlobal = null
+
+function validateForm(form) {
+    formGlobal = form
+
+    console.log('WKNumState')
+    var atividadeAtual = getValue('WKNumState')
+    var prxAtividade = getValue('WKNextState')
+    var fimAtividade = getValue('WKCompletTask')
+
+    if ((fimAtividade == 'false') || (atividadeAtual == prxAtividade)) {
+        return
+    }
+
+    if (atividadeAtual == '0' || atividadeAtual == '5') { // start
+        validarCampo('setor_emitente', 'Setor')
+        validarCampo('cnpj', 'Cnpj')
+        validarCampo('empresa', 'Empresa')
+        validarCampo('dt_venc', 'Data do Vencimento')
+        validarCampo('dt_emissao', 'Data da Emissão')
+        validarCampo('descricao', 'Descrição')
+        validarCampo('forma_pagamento', 'Forma de Pagamento')
+    
+    }
+
+    if (atividadeAtual == '21') { //aprovação
+        validarCampo('aprov', 'Aprovação')
+
+    }
+
+    if (erro == true) {
+        throw (mensagemErro)
+    }
+}
+
+function validarCampo(campo, labelCampo) {
+    if (formGlobal.getValue(campo) == null || formGlobal.getValue(campo) == '') {
+        mensagemErro += '\n- ' + labelCampo
+        erro = true
+    }
+}
