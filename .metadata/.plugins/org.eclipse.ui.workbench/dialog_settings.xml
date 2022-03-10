@@ -6,7 +6,7 @@
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
 		<item value="624" key="dialogHeight"/>
-		<item value="1200" key="dialogWidth"/>
+		<item value="900" key="dialogWidth"/>
 		<list key="textEntries">
 			<item value="1"/>
 		</list>
@@ -24,7 +24,7 @@
 	</section>
 	<section name="ImportExportAction">
 		<item value="com.totvs.tds.ecm.designer.eclipse.ui.BPMExportManager" key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID"/>
-		<item value="com.totvs.tds.ecm.designer.eclipse.ui.ImportDatasetWizard" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<item value="com.totvs.tds.ecm.designer.eclipse.ui.ImportProcessGeneralWizard" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
 			<item value="com.totvs.tds.ecm.category.bpm.importWizard"/>
 		</list>
