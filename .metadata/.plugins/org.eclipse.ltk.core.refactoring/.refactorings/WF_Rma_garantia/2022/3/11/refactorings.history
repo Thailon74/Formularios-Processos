@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;WF_Rma_garantia/workflow/diagrams/wf_rma_garantia.process&apos; to &apos;wf_rma_fora_garantia.process&apos;" description="Rename resource &apos;wf_rma_garantia.process&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="workflow/diagrams/wf_rma_garantia.process" name="wf_rma_fora_garantia.process" stamp="1646998304788" updateReferences="true"/>
+</session>

@@ -40,8 +40,7 @@
 					<div class="form-group">
 						<div class="col-md-4">
 							<label>Setor </label>
-							<input type="text" class="form-control" id ="setor_emitente" name="setor_emitente" value=""
-								placeholder="Setor emitente da solicitação" data-size="medium">
+							<input type="text" class="form-control" id ="setor_emitente" name="setor_emitente" data-size="medium">
 						</div>
 					</div>
 				</div>
@@ -52,8 +51,7 @@
 					<div class="form-group">
 						<div class="col-md-4">
 							<label>CNPJ</label>
-							<input type="text" class="form-control" id="cnpj" name="cnpj" value=""
-								placeholder="CNPJ da empresa beneficiada" data-size="medium" mask="00.000.000/0000-00"
+							<input type="text" class="form-control" id="cnpj" name="cnpj" data-size="medium" mask="00.000.000/0000-00"
 								maxlength="18" data-only-numbers="true">
 						</div>
 					</div>
@@ -65,8 +63,7 @@
 					<div class="form-group">
 						<div class="col-md-4">
 							<label>Empresa</label>
-							<input type="text" class="form-control" id="empresa" name="empresa" value=""
-								placeholder="Nome da empresa beneficiada" data-size="small">
+							<input type="text" class="form-control" id="empresa" name="empresa" data-size="small">
 						</div>
 					</div>
 				</div>
@@ -78,8 +75,7 @@
 					<div class="form-group">
 						<div class="col-md-2">
 							<label>Data pagamento</label>
-							<input type="text" class="form-control" id="dt_venc" name="dt_venc" value=""
-								placeholder="Data do vencimento" data-size="small" mask="00/00/0000" maxlength="10"
+							<input type="text" class="form-control" id="dt_venc" name="dt_venc" data-size="small" mask="00/00/0000" maxlength="10"
 								data-only-numbers="true">
 						</div>
 					</div>
@@ -91,8 +87,7 @@
 					<div class="form-group">
 						<div class="col-md-2">
 							<label>Data Emissão</label>
-							<input type="text" class="form-control" id="dt_emissao" name="dt_emissao" value=""
-								placeholder="Data da emissão " data-size="small" mask="00/00/0000" maxlength="10"
+							<input type="text" class="form-control" id="dt_emissao" name="dt_emissao" data-size="small" mask="00/00/0000" maxlength="10"
 								data-only-numbers="true">
 						</div>
 					</div>
@@ -102,11 +97,10 @@
 		<br>
 		<div class="form-field" data-type="tabledetail" data-show-properties="" data-field-name="Registro"
 			style="position: relative; left: 0px; top: 0px;">
-
 			<div class="form-input">
 				<div class="form-group">
 					<label>Registro</label>
-					<table tablename="tabledetailname" id="tabledetailname" class="table" noaddbutton="true" nodeletebutton="false" customFnDelete="fnCustomDelete(this)">
+					<table tablename="tabledetailname" id="tabledetailname" class="table" noaddbutton="true" nodeletebutton="false">
 						<thead>
 							<tr class="tableHeadRow">
 								<th class="tableColumn col-md-4">Centro de custo</th>
@@ -166,8 +160,7 @@
 						<label>Valor total</label>
 						<div class="input-group">
 						<!--<span class="input-group-addon">R$</span>-->
-						<input readonly type="text" class="moeda val_total form-control" id="valor_total" value=" " name="BoxValTotal"
-							placeholder="Valor total da compra" data-size="small">
+						<input readonly type="text" class="moeda val_total form-control" id="valor_total" name="BoxValTotal" data-size="small">
 						</div>
 					</div>
 				</div>
@@ -204,14 +197,26 @@
 		<div >
 			<div class="form-input">
 				<div class="form-group">
-					<label>Aprovação</label>
 					<div class="row">
 						<div class="col-md-2">
+							<label>Aprovação</label>
 							<select class="form-control" id="aprov" name="aprov">
 								<option>Selecione</option>
 								<option>Aprovado</option>
 								<option>Reprovado</option>
 							</select>
+						</div>
+						<div class="col-md-2">
+							<label>Validação</label>
+							<select name="validacao" id="validacao" class="form-control">
+								<option>Selecione</option>
+								<option>Correto</option>
+								<option>Revisão</option>
+							</select>
+						</div>
+						<div class="col-md-6">
+							<label>Obs. Aprovador/Revisão</label>
+							<textarea class="form-control" rows="1" id="obs_aprov" name="obs_aprov"></textarea>
 						</div>
 					</div>
 				</div>
@@ -222,7 +227,9 @@
 <script type="text/javascript" src="Custom.js"></script>
 
 <script>
+
 	var beforeSendValidate = function (numState, nextState) {
+		console.log(numState)
 		beforeSendValidateAux(numState, nextState)
 	}
 </script>

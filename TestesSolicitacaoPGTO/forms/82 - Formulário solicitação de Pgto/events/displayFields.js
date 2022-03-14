@@ -13,11 +13,11 @@ function displayFields(form, customHTML) {
     form.setEnabled('descricao', false)
     form.setEnabled('forma_pagamento', false)
     form.setEnabled('aprov', false)
-    //form.setEnabled('agencia', false)
-    //form.setEnabled('conta_corrente', false)
+    form.setEnabled('agencia', false)
+    form.setEnabled('conta_corrente', false)
+    form.setEnabled('validacao',false)
 
-    if (atividadeAtual == '0' || atividadeAtual == '5') { //começo
-
+    if (atividadeAtual == '0' || atividadeAtual == '5' ||atividadeAtual == '1') { //começo
     form.setEnabled('setor_emitente',true)
     form.setEnabled('cnpj', true)
     form.setEnabled('empresa', true)
@@ -26,6 +26,8 @@ function displayFields(form, customHTML) {
     form.setEnabled('valor_total', true)
     form.setEnabled('descricao', true)
     form.setEnabled('forma_pagamento', true)
+    form.setEnabled('agencia', true)
+    form.setEnabled('conta_corrente', true)
 
     }else{ 
         var indexes = form.getChildrenIndexes('tabledetailname')
@@ -42,4 +44,9 @@ function displayFields(form, customHTML) {
         form.setEnabled('aprov',true)
         
     }
+
+    if(atividadeAtual == '9'){//verificar conta contabil
+        form.setEnabled('validacao',true)
+    }
+
 }

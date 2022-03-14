@@ -39,7 +39,7 @@
     <blockedVersion>false</blockedVersion>
     <counterSign>false</counterSign>
     <openInstances>0</openInstances>
-    <bpmnVersion>1</bpmnVersion>
+    <bpmnVersion>2</bpmnVersion>
     <processStates/>
     <favorito>false</favorito>
     <inheritFormSecurity>false</inheritFormSecurity>
@@ -76,7 +76,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>242</positionX>
-      <positionY>10</positionY>
+      <positionY>14</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -125,57 +125,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>30</positionX>
-      <positionY>260</positionY>
-      <forecastedEffortType>0</forecastedEffortType>
-      <forecastedEffort>0</forecastedEffort>
-      <notifyManagerFollowUp>false</notifyManagerFollowUp>
-      <notifyManagerDelay>false</notifyManagerDelay>
-      <allowanceManagerTime>0</allowanceManagerTime>
-      <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>false</inhibitTransfer>
-      <periodId></periodId>
-      <stateType>0</stateType>
-      <bpmnType>80</bpmnType>
-      <signalId>0</signalId>
-      <counterSign>false</counterSign>
-      <openInstances>0</openInstances>
-      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
-      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
-      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-      <executionType>0</executionType>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>WF_RMA_REV01</processId>
-        <version>1</version>
-        <sequence>11</sequence>
-      </processStatePK>
-      <stateName>Analise em bancada</stateName>
-      <stateDescription>Analise em bancada</stateDescription>
-      <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
-      <deadlineFieldName></deadlineFieldName>
-      <joint>false</joint>
-      <agreementPercentage>0</agreementPercentage>
-      <selectColleague>1</selectColleague>
-      <initialState>false</initialState>
-      <notifyAuthorityDelay>true</notifyAuthorityDelay>
-      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
-      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
-      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
-      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
-      <automatic>false</automatic>
-      <positionX>670</positionX>
-      <positionY>290</positionY>
+      <positionY>264</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -224,8 +174,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>446</positionX>
-      <positionY>290</positionY>
+      <positionX>570</positionX>
+      <positionY>144</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -275,7 +225,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>446</positionX>
-      <positionY>450</positionY>
+      <positionY>454</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -325,7 +275,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>772</positionX>
-      <positionY>590</positionY>
+      <positionY>594</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -375,7 +325,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>772</positionX>
-      <positionY>760</positionY>
+      <positionY>764</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -425,7 +375,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>150</positionX>
-      <positionY>604</positionY>
+      <positionY>608</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -475,7 +425,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>310</positionX>
-      <positionY>604</positionY>
+      <positionY>608</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -525,7 +475,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>310</positionX>
-      <positionY>1150</positionY>
+      <positionY>1154</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -575,7 +525,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>310</positionX>
-      <positionY>1003</positionY>
+      <positionY>1007</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -625,7 +575,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>537</positionX>
-      <positionY>824</positionY>
+      <positionY>828</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -651,56 +601,6 @@
         <companyId>1</companyId>
         <processId>WF_RMA_REV01</processId>
         <version>1</version>
-        <sequence>5</sequence>
-      </processStatePK>
-      <stateName>Garantia?</stateName>
-      <stateDescription>Garantia?</stateDescription>
-      <joint>false</joint>
-      <initialState>false</initialState>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <automatic>true</automatic>
-      <positionX>230</positionX>
-      <positionY>120</positionY>
-      <inhibitTransfer>false</inhibitTransfer>
-      <stateType>1</stateType>
-      <bpmnType>120</bpmnType>
-      <signalId>0</signalId>
-      <openInstances>0</openInstances>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>WF_RMA_REV01</processId>
-        <version>1</version>
-        <sequence>8</sequence>
-      </processStatePK>
-      <stateName>Importado?</stateName>
-      <stateDescription>Importado?</stateDescription>
-      <joint>false</joint>
-      <initialState>false</initialState>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <automatic>true</automatic>
-      <positionX>560</positionX>
-      <positionY>120</positionY>
-      <inhibitTransfer>false</inhibitTransfer>
-      <stateType>1</stateType>
-      <bpmnType>120</bpmnType>
-      <signalId>0</signalId>
-      <openInstances>0</openInstances>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>WF_RMA_REV01</processId>
-        <version>1</version>
         <sequence>17</sequence>
       </processStatePK>
       <stateName>Funcional?</stateName>
@@ -712,7 +612,7 @@
       <formFolder>0</formFolder>
       <automatic>true</automatic>
       <positionX>795</positionX>
-      <positionY>434</positionY>
+      <positionY>438</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
       <bpmnType>120</bpmnType>
@@ -737,7 +637,7 @@
       <formFolder>0</formFolder>
       <automatic>true</automatic>
       <positionX>53</positionX>
-      <positionY>418</positionY>
+      <positionY>422</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
       <bpmnType>120</bpmnType>
@@ -762,7 +662,7 @@
       <formFolder>0</formFolder>
       <automatic>true</automatic>
       <positionX>230</positionX>
-      <positionY>418</positionY>
+      <positionY>422</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
       <bpmnType>120</bpmnType>
@@ -787,7 +687,7 @@
       <formFolder>0</formFolder>
       <automatic>true</automatic>
       <positionX>173</positionX>
-      <positionY>834</positionY>
+      <positionY>838</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
       <bpmnType>120</bpmnType>
@@ -812,10 +712,35 @@
       <formFolder>0</formFolder>
       <automatic>true</automatic>
       <positionX>333</positionX>
-      <positionY>843</positionY>
+      <positionY>847</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
       <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>WF_RMA_REV01</processId>
+        <version>1</version>
+        <sequence>66</sequence>
+      </processStatePK>
+      <stateName>Garantia?</stateName>
+      <stateDescription>Garantia?</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>false</automatic>
+      <positionX>230</positionX>
+      <positionY>128</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>3</stateType>
+      <bpmnType>121</bpmnType>
       <signalId>0</signalId>
       <openInstances>0</openInstances>
       <destinationStates/>
@@ -851,7 +776,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>807</positionX>
-      <positionY>910</positionY>
+      <positionY>914</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -898,7 +823,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>481</positionX>
-      <positionY>639</positionY>
+      <positionY>643</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -945,7 +870,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>65</positionX>
-      <positionY>673</positionY>
+      <positionY>677</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -992,7 +917,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>136</positionX>
-      <positionY>1003</positionY>
+      <positionY>1007</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -1039,7 +964,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>345</positionX>
-      <positionY>1310</positionY>
+      <positionY>1314</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -1064,125 +989,6 @@
         <companyId>1</companyId>
         <processId>WF_RMA_REV01</processId>
         <version>1</version>
-        <linkSequence>6</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>4</initialStateSequence>
-      <finalStateSequence>5</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>WF_RMA_REV01</processId>
-        <version>1</version>
-        <linkSequence>9</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>5</initialStateSequence>
-      <finalStateSequence>8</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>WF_RMA_REV01</processId>
-        <version>1</version>
-        <linkSequence>10</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>5</initialStateSequence>
-      <finalStateSequence>7</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>WF_RMA_REV01</processId>
-        <version>1</version>
-        <linkSequence>13</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>8</initialStateSequence>
-      <finalStateSequence>11</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>WF_RMA_REV01</processId>
-        <version>1</version>
-        <linkSequence>14</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>8</initialStateSequence>
-      <finalStateSequence>12</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>WF_RMA_REV01</processId>
-        <version>1</version>
-        <linkSequence>16</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>12</initialStateSequence>
-      <finalStateSequence>15</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>WF_RMA_REV01</processId>
-        <version>1</version>
-        <linkSequence>18</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>11</initialStateSequence>
-      <finalStateSequence>17</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>WF_RMA_REV01</processId>
-        <version>1</version>
         <linkSequence>20</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
@@ -1190,7 +996,7 @@
       <initialStateSequence>17</initialStateSequence>
       <finalStateSequence>15</finalStateSequence>
       <returnLabel></returnLabel>
-      <name></name>
+      <name>sim</name>
       <automaticLink>false</automaticLink>
       <defaultLink>false</defaultLink>
       <type>0</type>
@@ -1501,6 +1307,57 @@
       <defaultLink>false</defaultLink>
       <type>0</type>
     </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>WF_RMA_REV01</processId>
+        <version>1</version>
+        <linkSequence>67</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>4</initialStateSequence>
+      <finalStateSequence>66</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>WF_RMA_REV01</processId>
+        <version>1</version>
+        <linkSequence>68</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>66</initialStateSequence>
+      <finalStateSequence>7</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>WF_RMA_REV01</processId>
+        <version>1</version>
+        <linkSequence>72</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>66</initialStateSequence>
+      <finalStateSequence>12</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
   </list>
   <list/>
   <list/>
@@ -1510,7 +1367,7 @@
     <ProcessComponGraf>
       <componType>1</componType>
       <positionX>900</positionX>
-      <positionY>879</positionY>
+      <positionY>883</positionY>
       <processComponGrafPK>
         <companyId>1</companyId>
         <processId>WF_RMA_REV01</processId>
@@ -1522,7 +1379,7 @@
     <ProcessComponGraf>
       <componType>1</componType>
       <positionX>578</positionX>
-      <positionY>622</positionY>
+      <positionY>626</positionY>
       <processComponGrafPK>
         <companyId>1</companyId>
         <processId>WF_RMA_REV01</processId>
@@ -1534,7 +1391,7 @@
     <ProcessComponGraf>
       <componType>1</componType>
       <positionX>30</positionX>
-      <positionY>753</positionY>
+      <positionY>757</positionY>
       <processComponGrafPK>
         <companyId>1</companyId>
         <processId>WF_RMA_REV01</processId>
@@ -1546,7 +1403,7 @@
     <ProcessComponGraf>
       <componType>1</componType>
       <positionX>8</positionX>
-      <positionY>965</positionY>
+      <positionY>969</positionY>
       <processComponGrafPK>
         <companyId>1</companyId>
         <processId>WF_RMA_REV01</processId>
@@ -1558,7 +1415,7 @@
     <ProcessComponGraf>
       <componType>1</componType>
       <positionX>423</positionX>
-      <positionY>1300</positionY>
+      <positionY>1304</positionY>
       <processComponGrafPK>
         <companyId>1</companyId>
         <processId>WF_RMA_REV01</processId>
@@ -1566,6 +1423,18 @@
         <componGrafSequence>64</componGrafSequence>
       </processComponGrafPK>
       <stateName>Devolução ao cliente</stateName>
+    </ProcessComponGraf>
+    <ProcessComponGraf>
+      <componType>1</componType>
+      <positionX>410</positionX>
+      <positionY>0</positionY>
+      <processComponGrafPK>
+        <companyId>1</companyId>
+        <processId>WF_RMA_REV01</processId>
+        <version>1</version>
+        <componGrafSequence>70</componGrafSequence>
+      </processComponGrafPK>
+      <stateName>Validar itens que ja tem um processo em andamento</stateName>
     </ProcessComponGraf>
   </list>
   <list>
@@ -1618,6 +1487,16 @@
       </processLinkAssocPK>
       <initialStateSequence>64</initialStateSequence>
       <finalStateSequence>59</finalStateSequence>
+    </ProcessLinkAssoc>
+    <ProcessLinkAssoc>
+      <processLinkAssocPK>
+        <companyId>1</companyId>
+        <processId>WF_RMA_REV01</processId>
+        <version>1</version>
+        <linkSequence>71</linkSequence>
+      </processLinkAssocPK>
+      <initialStateSequence>70</initialStateSequence>
+      <finalStateSequence>4</finalStateSequence>
     </ProcessLinkAssoc>
   </list>
   <list/>

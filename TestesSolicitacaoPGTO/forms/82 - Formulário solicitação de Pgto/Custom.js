@@ -1,5 +1,5 @@
 const ATIVIDADE_ATUAL = $('#atividade_atual').val()
-const ATIVIDADE_INICIO = '0'
+const ATIVIDADE_INICIO = '1'
 const ATIVIDADE_INICIO_SALVA = '5'
 
 removerBotoes()
@@ -52,9 +52,9 @@ function beforeSendValidateAux(numState, nextState) {
     let mensagemErro = 'Preencha os campos abaixo:\n'
     let erro = false
 
-    if (inputsCC.length == 0) {
+    if (inputsValor.length == 0) {
         throw 'É necesssário <b>incluir pelo menos um ' +
-        'Registro</b> na <b>tabela de Registros/b>!'
+        'Registro</b> na <b>tabela de Registros</b>!'
     }
 
     for (let i = 0; i < inputsCC.length; i++) {
@@ -99,12 +99,15 @@ function aperecerContaAgencia(){
 
     var formaPagamento =  $('#forma_pagamento').val()
     var confirmacao = $('#agencia').val()
-    var textoAdicionar = '<div class="remover col-md-2"><label>Agencia</label><input type="text" class="form-control" id="agencia" name="agencia"></div><div class="col-md-2"><label>Conta corrente</label><input type="text" class="form-control" id="conta_corrente" name="conta_corrente"></div>'
+    var textoAdicionar = '<div class="remover"><div class="col-md-2"><label>Banco</label><input type="text" class="form-control" id="banco" name="banco" /></div><div class="remover col-md-2"><label>Agência</label><input type="text" class="form-control" id="agencia" name="agencia" /></div><div class="col-md-2"><label>Conta corrente</label><input type="text" class="form-control" id="conta_corrente" name="conta_corrente" /></div></div>'
 
-    if(formaPagamento == '3' && confirmacao == null){
+    if(formaPagamento == '3' && (confirmacao == null || confirmacao == '')){
 
         $( ".testeInput" ).append(textoAdicionar)
 
+    }else{
+        $('.remover').hide();
+        
     }
 
 }

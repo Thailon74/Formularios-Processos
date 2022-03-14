@@ -4,7 +4,7 @@
       <companyId>1</companyId>
       <processId>wf_contas_a_pagar</processId>
     </processDefinitionPK>
-    <processDescription>Contas a pagar </processDescription>
+    <processDescription>Solicitação de pagamento - TI</processDescription>
     <instruction></instruction>
     <active>true</active>
     <publicProcess>false</publicProcess>
@@ -27,8 +27,8 @@
   <ProcessDefinitionVersion>
     <processDefinitionVersionPK>
       <companyId>1</companyId>
-      <processId>Contas a pagar </processId>
-      <version>12</version>
+      <processId>Solicitação de pagamento - TI</processId>
+      <version>32</version>
     </processDefinitionVersionPK>
     <versionDescription>Nova Versão.</versionDescription>
     <formId>82</formId>
@@ -75,7 +75,7 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>390</positionX>
+      <positionX>370</positionX>
       <positionY>99</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
@@ -125,8 +125,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>360</positionX>
-      <positionY>588</positionY>
+      <positionX>340</positionX>
+      <positionY>552</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -176,8 +176,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>360</positionX>
-      <positionY>750</positionY>
+      <positionX>150</positionX>
+      <positionY>810</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -254,6 +254,56 @@
         <companyId>1</companyId>
         <processId>wf_contas_a_pagar</processId>
         <version>1</version>
+        <sequence>62</sequence>
+      </processStatePK>
+      <stateName>Anexo de comprovante</stateName>
+      <stateDescription>Anexo de comprovante</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>370</positionX>
+      <positionY>810</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>wf_contas_a_pagar</processId>
+        <version>1</version>
         <sequence>54</sequence>
       </processStatePK>
       <stateName>Aprovação</stateName>
@@ -264,7 +314,7 @@
       <subProcessId></subProcessId>
       <formFolder>0</formFolder>
       <automatic>true</automatic>
-      <positionX>370</positionX>
+      <positionX>360</positionX>
       <positionY>324</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
@@ -279,7 +329,32 @@
         <companyId>1</companyId>
         <processId>wf_contas_a_pagar</processId>
         <version>1</version>
-        <sequence>16</sequence>
+        <sequence>58</sequence>
+      </processStatePK>
+      <stateName>Esta tudo certo?</stateName>
+      <stateDescription>Esta tudo certo?</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>360</positionX>
+      <positionY>650</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>wf_contas_a_pagar</processId>
+        <version>1</version>
+        <sequence>64</sequence>
       </processStatePK>
       <stateName>Fim</stateName>
       <stateDescription>Fim</stateDescription>
@@ -303,8 +378,8 @@
       <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>654</positionX>
-      <positionY>767</positionY>
+      <positionX>600</positionX>
+      <positionY>820</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -328,7 +403,7 @@
         <companyId>1</companyId>
         <processId>wf_contas_a_pagar</processId>
         <expressionOrder>1</expressionOrder>
-        <version>12</version>
+        <version>32</version>
         <sequence>54</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -340,8 +415,32 @@
         <companyId>1</companyId>
         <processId>wf_contas_a_pagar</processId>
         <expressionOrder>2</expressionOrder>
-        <version>12</version>
+        <version>32</version>
         <sequence>54</sequence>
+      </conditionProcessStatePK>
+      <condition></condition>
+      <destinationSequenceId>1</destinationSequenceId>
+      <conditionType>1</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>wf_contas_a_pagar</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>32</version>
+        <sequence>58</sequence>
+      </conditionProcessStatePK>
+      <condition></condition>
+      <destinationSequenceId>12</destinationSequenceId>
+      <conditionType>1</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>wf_contas_a_pagar</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>32</version>
+        <sequence>58</sequence>
       </conditionProcessStatePK>
       <condition></condition>
       <destinationSequenceId>1</destinationSequenceId>
@@ -349,46 +448,6 @@
     </ConditionProcessState>
   </list>
   <list>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>wf_contas_a_pagar</processId>
-        <version>1</version>
-        <linkSequence>13</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>9</initialStateSequence>
-      <finalStateSequence>12</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-      <movementTitle></movementTitle>
-      <movementDescription></movementDescription>
-      <movementAccessLinkDescription></movementAccessLinkDescription>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>wf_contas_a_pagar</processId>
-        <version>1</version>
-        <linkSequence>52</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>12</initialStateSequence>
-      <finalStateSequence>16</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-      <movementTitle></movementTitle>
-      <movementDescription></movementDescription>
-      <movementAccessLinkDescription></movementAccessLinkDescription>
-    </ProcessLink>
     <ProcessLink>
       <processLinkPK>
         <companyId>1</companyId>
@@ -460,6 +519,91 @@
       <defaultLink>false</defaultLink>
       <type>0</type>
     </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>wf_contas_a_pagar</processId>
+        <version>1</version>
+        <linkSequence>59</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>9</initialStateSequence>
+      <finalStateSequence>58</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>wf_contas_a_pagar</processId>
+        <version>1</version>
+        <linkSequence>60</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>58</initialStateSequence>
+      <finalStateSequence>12</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>wf_contas_a_pagar</processId>
+        <version>1</version>
+        <linkSequence>61</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>58</initialStateSequence>
+      <finalStateSequence>1</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>wf_contas_a_pagar</processId>
+        <version>1</version>
+        <linkSequence>63</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>12</initialStateSequence>
+      <finalStateSequence>62</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>wf_contas_a_pagar</processId>
+        <version>1</version>
+        <linkSequence>65</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>62</initialStateSequence>
+      <finalStateSequence>64</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
   </list>
   <list/>
   <list>
@@ -495,7 +639,7 @@
     </SwimLane>
     <SwimLane>
       <color>be9fc4</color>
-      <height>143</height>
+      <height>195</height>
       <width>700</width>
       <positionX>0</positionX>
       <positionY>696</positionY>
@@ -544,7 +688,30 @@
   </list>
   <list/>
   <list/>
-  <list/>
+  <list>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>wf_contas_a_pagar</processId>
+        <version>32</version>
+        <linkSequence>61</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>589</positionX>
+      <positionY>717</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>wf_contas_a_pagar</processId>
+        <version>32</version>
+        <linkSequence>61</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>589</positionX>
+      <positionY>117</positionY>
+    </ProcessLinkBend>
+  </list>
   <list/>
   <list/>
   <list>
@@ -638,6 +805,15 @@
       <fieldDescription>setor_emitente</fieldDescription>
       <slotId>10</slotId>
     </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>wf_contas_a_pagar</processId>
+        <fieldId>validacao</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>validacao</fieldDescription>
+      <slotId>11</slotId>
+    </ProcessFormField>
   </list>
   <list/>
   <list/>
@@ -646,7 +822,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>wf_contas_a_pagar</processId>
-      <processVersion>12</processVersion>
+      <processVersion>32</processVersion>
       <stateSequence>21</stateSequence>
       <appKey>approval</appKey>
       <appField>title</appField>
@@ -656,7 +832,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>wf_contas_a_pagar</processId>
-      <processVersion>12</processVersion>
+      <processVersion>32</processVersion>
       <stateSequence>21</stateSequence>
       <appKey>approval</appKey>
       <appField>description</appField>
@@ -666,7 +842,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>wf_contas_a_pagar</processId>
-      <processVersion>12</processVersion>
+      <processVersion>32</processVersion>
       <stateSequence>21</stateSequence>
       <appKey>approval</appKey>
       <appField>highlight</appField>
@@ -676,7 +852,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>wf_contas_a_pagar</processId>
-      <processVersion>12</processVersion>
+      <processVersion>32</processVersion>
       <stateSequence>21</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
@@ -686,7 +862,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>wf_contas_a_pagar</processId>
-      <processVersion>12</processVersion>
+      <processVersion>32</processVersion>
       <stateSequence>21</stateSequence>
       <appKey>approval</appKey>
       <appField>reject</appField>
@@ -709,7 +885,25 @@
       <expressionOrder>2</expressionOrder>
       <ruleOrder>1</ruleOrder>
       <field>aprov</field>
-      <value>Recusado</value>
+      <value>Reprovado</value>
+      <operator>1</operator>
+      <valueType>1</valueType>
+    </ConditionProcessAutomaticRules>
+    <ConditionProcessAutomaticRules>
+      <sequence>58</sequence>
+      <expressionOrder>1</expressionOrder>
+      <ruleOrder>1</ruleOrder>
+      <field>validacao</field>
+      <value>Correto</value>
+      <operator>1</operator>
+      <valueType>1</valueType>
+    </ConditionProcessAutomaticRules>
+    <ConditionProcessAutomaticRules>
+      <sequence>58</sequence>
+      <expressionOrder>2</expressionOrder>
+      <ruleOrder>1</ruleOrder>
+      <field>validacao</field>
+      <value>Revisão</value>
       <operator>1</operator>
       <valueType>1</valueType>
     </ConditionProcessAutomaticRules>
