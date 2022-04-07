@@ -5,28 +5,33 @@ const ATIVIDADE_INICIO_SALVA = '5'
 removerBotoes()
 aperecerContaAgencia()
 
-function calcularTotal(){
+function calcularTotal() {
     let camposValores = $('.cl_valor').slice(1);
     let totalizador = 0;
 
-    for (let i = 0; i < camposValores.length; i++){
-        let tmpValor = parseFloat(camposValores[i].value.replace(",","."))
-        totalizador += tmpValor  
+    for (let i = 0; i < camposValores.length; i++) {
+        let tmpValor = camposValores[i].value
+        tmpValor = tmpValor.replaceAll(".", "")
+        tmpValor = tmpValor.replaceAll(",", ".")
+        tmpValor = parseFloat(tmpValor)
+        totalizador += tmpValor
     }
 
-    let formatado = totalizador.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'});
+    console.log('totalizador', totalizador)
+
+    let formatado = totalizador.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    console.log('formatado', formatado)
 
     $('#valor_total').val(formatado)
-
 }
 
-function fnCustomDelete(elemento){
+function fnCustomDelete(elemento) {
 
     fnWdkRemoveChild(elemento)
     calcularTotal()
 }
 
-function removerBotoes(){
+function removerBotoes() {
 
     var atividadeAtual = $('#atividade_atual').val();
 
@@ -34,7 +39,7 @@ function removerBotoes(){
 
         $('#bt_nv_registro').show()
 
-    }else{
+    } else {
 
         $('#bt_nv_registro').hide()
 
@@ -95,19 +100,25 @@ function toast(mensagem, tipo, timeout) {
     })
 }
 
-function aperecerContaAgencia(){
-
-    var formaPagamento =  $('#forma_pagamento').val()
+function aperecerContaAgencia(ocultar) {
+    var formaPagamento = $('#forma_pagamento').val()
     var confirmacao = $('#agencia').val()
-    var textoAdicionar = '<div class="remover"><div class="col-md-2"><label>Banco</label><input type="text" class="form-control" id="banco" name="banco" /></div><div class="remover col-md-2"><label>Agência</label><input type="text" class="form-control" id="agencia" name="agencia" /></div><div class="col-md-2"><label>Conta corrente</label><input type="text" class="form-control" id="conta_corrente" name="conta_corrente" /></div></div>'
 
-    if(formaPagamento == '3' && (confirmacao == null || confirmacao == '')){
-
-        $( ".testeInput" ).append(textoAdicionar)
-
-    }else{
-        $('.remover').hide();
-        
+    if (formaPagamento == '3' && (confirmacao == null || confirmacao == '')) {
+        $('.remover input').attr('readonly', false);
+        $('.remover').show()
+    } else {
+        $('.remover input').attr('readonly', true);
+        $('#banco').val('')
+        $('#agencia').val('')
+        $('#conta_corrente').val('')
+        if (ocultar == true) {
+            $('.remover').hide()
+        }
     }
+}
 
+function addLinhaPaiFilho() {
+    wdkAddChild('tabledetailname')
+    $('.moeda').mask('#.##0.000.000.000,00', { reverse: true })
 }

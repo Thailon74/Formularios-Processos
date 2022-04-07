@@ -4,7 +4,7 @@
 <head>
 	<title>Form</title>
 
-	<link rel="stylesheet" type="text/css" href="/style-guide/css/fluig-style-guide.min.css">
+	<link rel="stylesheet" type="text/css" href="https://parkshomolog.fluig.cloudtotvs.com.br/style-guide/css/fluig-style-guide.min.css">
 	<script src="/resources/js/jquery/jquery.js"></script>
 	<script src="/resources/js/jquery/jquery-ui.min.js"></script>
 	<script src="/resources/js/mustache/mustache-min.js"></script>
@@ -18,14 +18,14 @@
 	<script src="/style-guide/js/fluig-style-guide-ratingstars.min.js"></script>
 
 	<link href='/webdesk/customresources?cid=1&resourceName=temaFormulario/1.css' type='text/css' rel='stylesheet' />
-	
+
 </head>
 
 <body class="fluig-style-guide">
 
 	<form class="totvs-form grid vertical create-form-components ui-sortable " name="createFormComponents"
 		style="padding-left: 10px; padding-right: 10px;">
-		
+
 		<img src="https://parkssa127265.fluig.cloudtotvs.com.br/portal/api/servlet/image/1/custom/logo_image.png"
 			alt="Logo" id="logo" style="max-height: 60px; max-width: 140px;">
 		<br>
@@ -40,7 +40,8 @@
 					<div class="form-group">
 						<div class="col-md-4">
 							<label>Setor </label>
-							<input type="text" class="form-control" id ="setor_emitente" name="setor_emitente" data-size="medium">
+							<input type="text" class="form-control" id="setor_emitente" name="setor_emitente"
+								data-size="medium">
 						</div>
 					</div>
 				</div>
@@ -51,8 +52,8 @@
 					<div class="form-group">
 						<div class="col-md-4">
 							<label>CNPJ</label>
-							<input type="text" class="form-control" id="cnpj" name="cnpj" data-size="medium" mask="00.000.000/0000-00"
-								maxlength="18" data-only-numbers="true">
+							<input type="text" class="form-control" id="cnpj" name="cnpj" data-size="medium"
+								mask="00.000.000/0000-00" maxlength="18" data-only-numbers="true">
 						</div>
 					</div>
 				</div>
@@ -75,8 +76,8 @@
 					<div class="form-group">
 						<div class="col-md-2">
 							<label>Data pagamento</label>
-							<input type="text" class="form-control" id="dt_venc" name="dt_venc" data-size="small" mask="00/00/0000" maxlength="10"
-								data-only-numbers="true">
+							<input type="text" class="form-control" id="dt_venc" name="dt_venc" data-size="small"
+								mask="00/00/0000" maxlength="10" data-only-numbers="true">
 						</div>
 					</div>
 				</div>
@@ -87,8 +88,8 @@
 					<div class="form-group">
 						<div class="col-md-2">
 							<label>Data Emissão</label>
-							<input type="text" class="form-control" id="dt_emissao" name="dt_emissao" data-size="small" mask="00/00/0000" maxlength="10"
-								data-only-numbers="true">
+							<input type="text" class="form-control" id="dt_emissao" name="dt_emissao" data-size="small"
+								mask="00/00/0000" maxlength="10" data-only-numbers="true">
 						</div>
 					</div>
 				</div>
@@ -100,7 +101,8 @@
 			<div class="form-input">
 				<div class="form-group">
 					<label>Registro</label>
-					<table tablename="tabledetailname" id="tabledetailname" class="table" noaddbutton="true" nodeletebutton="false">
+					<table tablename="tabledetailname" id="tabledetailname"  customFnDelete="fnCustomDelete(this)" class="table" noaddbutton="true"
+						nodeletebutton="false">
 						<thead>
 							<tr class="tableHeadRow">
 								<th class="tableColumn col-md-4">Centro de custo</th>
@@ -112,8 +114,8 @@
 							<tr class="tableBodyRow">
 								<td class="fs-v-align-middle">
 									<div class="form-input">
-										<input type="zoom" data-size="big" class="cl_cc form-control" name="centro_custo" id="centro_custo" 
-									data-zoom="{
+										<input type="zoom" data-size="big" class="cl_cc form-control"
+											name="centro_custo" id="centro_custo" data-zoom="{
 										'displayKey':'Centro de Custo',
 										'datasetId':'ds_centrodecusto',
 										'placeholder':'Escolha o centro de custo',
@@ -126,8 +128,8 @@
 
 								<td class="fs-v-align-middle">
 									<div class="form-input">
-										<input type="zoom" data-size="big" class="cl_conta form-control" name="conta_contabil" id="conta_contabil" 
-									data-zoom="{
+										<input type="zoom" data-size="big" class="cl_conta form-control"
+											name="conta_contabil" id="conta_contabil" data-zoom="{
 										'displayKey':'Conta Contabil',
 										'datasetId':'ds_contacontabil',
 										'placeholder':'Escolha a conta contábil',
@@ -142,14 +144,17 @@
 									<div class="form-input">
 										<div class="input-group">
 											<span class="input-group-addon">R$</span>
-											<input type="text" id="valor" name="valor" class="moeda cl_valor form-control" onchange="calcularTotal()" label="Valor" mask="000.000.000.000,00">
+											<input type="text" id="valor" name="valor"
+												class="moeda cl_valor form-control" onchange="calcularTotal()"
+												label="Valor">
 										</div>
 									</div>
 								</td>
 							</tr>
 						</tbody>
 					</table>
-					<button type="button" id='bt_nv_registro' class="btn btn-primary" onclick="wdkAddChild('tabledetailname')"> Novo Registro</button>
+					<button type="button" id='bt_nv_registro' class="btn btn-primary" onclick="addLinhaPaiFilho()"> Novo
+						Registro</button>
 				</div>
 			</div>
 		</div>
@@ -159,8 +164,9 @@
 					<div class="col-md-4">
 						<label>Valor total</label>
 						<div class="input-group">
-						<!--<span class="input-group-addon">R$</span>-->
-						<input readonly type="text" class="moeda val_total form-control" id="valor_total" name="BoxValTotal" data-size="small">
+							<!--<span class="input-group-addon">R$</span>-->
+							<input readonly type="text" class="val_total form-control" id="valor_total"
+								name="BoxValTotal" data-size="small">
 						</div>
 					</div>
 				</div>
@@ -175,26 +181,34 @@
 				</div>
 			</div>
 		</div>
-		<div >
+		<div>
 			<div class="form-input">
 				<div class="form-group">
 					<div class="testeInput row">
 						<div class="col-md-2">
 							<label>Forma de pagamento</label>
-							<select class="form-control" id="forma_pagamento" name="forma_pagamento" onchange="aperecerContaAgencia()">
-								<option value="1">Selecione</option >
-								<option value="2">Boleto</option >
-								<option value="3">Depósito em conta</option >
-								<option value="4">Cartão de crédito</option >
+							<select class="form-control" id="forma_pagamento" name="forma_pagamento"
+								onchange="aperecerContaAgencia(true)">
+								<option value="1">Selecione</option>
+								<option value="2">Boleto</option>
+								<option value="3">Depósito em conta</option>
+								<option value="4">Cartão de crédito</option>
 								<option value="5">PIX</option>
 							</select>
 						</div>
-					
+						<div class="remover" style="display: none;">
+							<div class="col-md-2"><label>Banco</label><input readonly type="text" class="form-control"
+									id="banco" name="banco" /></div>
+							<div class="remover col-md-2"><label>Agência</label><input readonly type="text"
+									class="form-control" id="agencia" name="agencia" /></div>
+							<div class="col-md-2"><label>Conta corrente</label><input readonly type="text"
+									class="form-control" id="conta_corrente" name="conta_corrente" /></div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div >
+		<div>
 			<div class="form-input">
 				<div class="form-group">
 					<div class="row">
@@ -224,6 +238,7 @@
 		</div>
 	</form>
 </body>
+<script type=" text/javascript" src="jquery.mask.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="Custom.js"></script>
 
 <script>

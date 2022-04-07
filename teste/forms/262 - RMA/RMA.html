@@ -1,0 +1,120 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+	<style>
+		.obrigatorio {
+			color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="fluig-style-guide">
+		<form name="form" role="form">
+			<input type="hidden" id="descritor" name="descritor">
+			<input type="hidden" id="item_nacional" name="item_nacional">
+			<input type="hidden" id="item_importado" name="item_importado">
+			<input type="hidden" id="item_garantia" name="item_garantia">
+			<input type="hidden" id="item_fora_garantia" name="item_fora_garantia">
+			<!-- ------------Início do Painel Recebimento NF ------------ -->
+			<div class='panel panel-primary' id='panel_recebimento_nf'>
+				<div class='panel-heading'>
+					<h3 class='panel-title'>
+						<a class='collapse-icon up' data-toggle='collapse'
+							href='#colapse_recebimento_nf'>Recebimento NF
+						</a></h3>
+				</div>
+				<div id='colapse_recebimento_nf' class='panel-collapse collapse in'>
+					<div class='panel-body'>
+						<div class='row'>
+							<div class='form-group col-md-3'>
+								<label for='numero_nf'>Número NF <span class="obrigatorio">*</span></label>
+								<input type='text' id='numero_nf' name='numero_nf' class='form-control'>
+							</div>
+							<div class='form-group col-md-3'>
+								<label for='codigo_cliente'>Código Cliente</label>
+								<input type='text' id='codigo_cliente' name='codigo_cliente' class='form-control'
+									readonly>
+							</div>
+							<div class='form-group col-md-6'>
+								<label for='nome_cliente'>Nome Cliente</label>
+								<input type='text' id='nome_cliente' name='nome_cliente' class='form-control' readonly>
+							</div>
+						</div>
+						<div class='row'>
+							<div class='form-group col-md-12' style="text-align: right;">
+								<button type='button' onclick="buscarItensNota()" name='btn_buscar_itens_nota'
+									style="width: 140px;" id='btn_buscar_itens_nota' class='btn btn-info'>Buscar
+									NF</button>
+							</div>
+						</div>
+						<hr>
+						<div id="filtro_itens" style="display: none;">
+							<div class='row'>
+								<div class='form-group col-md-12'>
+									<input type="text" class="form-control" id="filtro_numeros_serie"
+										name="filtro_numeros_serie">
+								</div>
+							</div>
+							<div class='row'>
+								<div class='form-group col-md-12' style="text-align: right;">
+									<button type='button' onclick="filtrarItensNota()" name='btn_filtrar_itens_nota'
+										style="width: 140px;" id='btn_filtrar_itens_nota' class='btn btn-info'>Filtrar
+										Itens</button>
+								</div>
+							</div>
+						</div>
+						<div class='row'>
+							<div class='form-group col-md-12'>
+								<table class="table table-striped" id="tb_itens_nota" tablename="tb_itens_nota"
+									noaddbutton="true">
+									<tr>
+										<th>Item</th>
+										<th>N. de Série</th>
+										<th>Origem</th>
+										<th>Garantia</th>
+										<th>Data Entrada</th>
+									</tr>
+									<tr>
+										<td>
+											<input readonly type='text' id='tb_item' name='tb_item'
+												class='form-control'>
+										</td>
+										<td>
+											<input readonly type='text' id='tb_serie' name='tb_serie'
+												class='form-control tb_itens_nota_serie'>
+										</td>
+										<td>
+											<input readonly type='text' id='tb_origem' name='tb_origem'
+												class='form-control tb_itens_nota_origem'>
+										</td>
+										<td>
+											<input readonly type='text' id='tb_garantia' name='tb_garantia'
+												class='form-control tb_itens_nota_garantia'>
+										</td>
+										<td>
+											<input readonly type='text' id='tb_entrada' name='tb_entrada'
+												class='form-control'>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- -------------Fim do Painel Recebimento NF ------------- -->
+		</form>
+	</div>
+</body>
+
+<script src="Custom.js"></script>
+
+</html>

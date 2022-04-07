@@ -3,7 +3,7 @@
 		<head>
 			<title>PARKS - Requisição de compra</title>
 
-            <link rel="stylesheet" type="text/css" href="https://parkssa127265.fluig.cloudtotvs.com.br/style-guide/css/fluig-style-guide.min.css">
+            <link rel="stylesheet" type="text/css" href="https://parkshomolog.fluig.cloudtotvs.com.br/style-guide/css/fluig-style-guide.min.css">
             <script src="/resources/js/jquery/jquery.js"></script>
             <script src="/resources/js/jquery/jquery-ui.min.js"></script>
             <script src="/resources/js/mustache/mustache-min.js"></script>
@@ -24,7 +24,7 @@
 				<div class="panel panel-default">
 					<div class="panel-body row cabecalho">
 							<div class="col-md-2">
-								<img src="https://parkssa127265.fluig.cloudtotvs.com.br/portal/api/servlet/image/1/custom/logo_image.png" alt="Logo" id="logo" style="max-height: 60px; max-width: 140px;">
+								<img src="https://parkshomolog.fluig.cloudtotvs.com.br/portal/api/servlet/image/1/custom/logo_image.png" alt="Logo" id="logo" style="max-height: 60px; max-width: 140px;">
 							</div>
 							<div class="col-md-7"> 
 								<h1 class="title-form-application">Formulário de Requisição de Compras</h1>
@@ -69,13 +69,22 @@
 							<label for="prazo_entrega" >Prazo de entrega</label>
 							<input type="text" class="form-control"name="prazo_entrega" mask="00/00/0000">
 						</div>
+						<div class="col-md-1">
+							<label>Moeda</label>
+							<select class="form-control"name="moeda" id="moeda" onchange="trocarMoeda(true)" >
+								<option value="R$">R$</option>
+								<option value="US$">US$</option>
+								<option value="EUR$">EUR$</option>
+								<option value="LB$">LB$</option>
+							</select>
+						</div>
 					</div>
 				</div>
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<div class="row">
 							<div class="form-group col-md-12 col-xs-12">
-								<table tablename="tb_itens" id="tb_itens" class="table table-striped" noaddbutton="true">
+								<table tablename="tb_itens" id="tb_itens" class="table table-striped" noaddbutton="true" customFnDelete="fnCustomDelete(this)">
 									<thead>
 										<tr >
 											<th class="col-md-2">Quantidade</th>
@@ -92,32 +101,24 @@
 														<span class="input-group-addon">Un</span>
 														<input type="text" class="cl_quantidade form-control" name="quantidade" id="quantidade">
 													</div>
+													<label>Numero da ordem de compra</label>
+													<input type="text" class="form-control" name="num_ord_compra" id="num_ord_compra">
 												</div>
 											</td>
 											<td>
-												<input type="zoom" data-size="big" class="form-control" name="item" id="item" 
-													data-zoom="{
-														'displayKey':'item',
-														'datasetId':'ds_Itens',
-														'placeholder':'Escolha os produtos',
-														'maximumSelectionLength':'10',
-														'fields':[{'field':'item',
-																	'label':'Item'
-															}]}">
+												<input type="text"  class="form-control" name="item" id="item">
 											</td>
 											<td>
 												<div class="form-input">
-													<div class="input-group">
-														<span class="input-group-addon">R$</span>
-														<input type="text" class="cl_custo_unit form-control" onchange="calcularTotal()" name="custo_unit" id="custo_unit" mask="#00.000.000.000.000,00">
+													<div class="add_moeda input-group">
+														<input type="text" class="moeda cl_custo_unit form-control" onchange="calcularTotal()" name="custo_unit" id="custo_unit" >
 													</div>
 												</div>
 											</td>
 											<td>
 												<div class="form-input">
-													<div class="input-group">
-														<span class="input-group-addon">R$</span>
-														<input readonly type="text" class="cl_custo_total form-control" name="custo_total" id="custo_total" mask="#00.000.000.000.000,00">
+													<div class="add_moeda input-group">
+														<input readonly type="text" class="moeda2 cl_custo_total form-control" name="custo_total" id="custo_total">
 													</div>
 												</div>
 											</td>
@@ -126,7 +127,7 @@
 								</table>
 							</div>
 						</div>
-						<button id="btn_add_contato" class="btn btn-primary" onclick="addChild()">Adicionar Item</button>
+						<button id="btn_add_contato" class="btn btn-primary" onclick="addLinhaPaiFilho()">Adicionar Item</button>
 					</div>
 				</div>
 				<div class="panel panel-default">
@@ -134,12 +135,46 @@
 						<div class="row">
 							<div class="col-md-3">
 								<label>Valor Total do Pedido</label>
-								<input readonly type="text" class=" cl_custo_pedido form-control" name="custo_pedido" id="custo_pedido">
+								<div class="form-input ">
+									<div class="add_moeda input-group">
+										
+										<input readonly type="text" class=" form-control" name="custo_pedido" id="custo_pedido">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-5">
+								<label>Observações</label>
+								<textarea type="text" class="form-control" name="observacoes" id="observacoes"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-2">
+								<label>Aprovação</label>
+								<select class="form-control" id="aprov" name="aprov">
+									<option>Selecione</option>
+									<option>Aprovado</option>
+									<option>Reprovado</option>
+								</select>
+							</div>
+							<div class="col-md-6">
+								<label>Obs. Aprovador</label>
+								<textarea class="form-control" rows="1" id="obs_aprov" name="obs_aprov"></textarea>
 							</div>
 						</div>
 					</div>
 				</div>
 			</form>
-			<script src="custom.js"></script>
+			<script type="text/javascript" src="jquery.mask.min.js" charset="utf-8"></script>
+			<script type="text/javascript" src="custom.js"></script>
 		</body>
 	</html>

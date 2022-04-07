@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;Requisição de compras&apos;&#x0D;&#x0A;- Original project: &apos;Requisição de compras&apos;&#x0D;&#x0A;- Original element: &apos;250 - Formulário de Requisição de Compras&apos;" description="Delete element" element1="forms/250 - Formulário de Requisição de Compras" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="1" stamp="1647974828156" subPackages="false" version="1.0"/>
+</session>

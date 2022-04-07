@@ -1,0 +1,240 @@
+<html>
+
+<head>
+	<link type="text/css" rel="stylesheet" href="https://parkshomolog.fluig.cloudtotvs.com.br/style-guide/css/fluig-style-guide.min.css" />
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/webdesk/vcXMLRPC.js" charset="utf-8"></script>
+
+</head>
+
+<body>
+	<div class="fluig-style-guide">
+		<form name="form" role="form">
+			<div class="panel panel-default">
+				<div class="row panel-body">
+					<div class="col-md-4">
+						<img src="https://parkshomolog.fluig.cloudtotvs.com.br/portal/api/servlet/image/1/custom/logo_image.png" alt="Logo" id="logo" style="max-height: 60px; max-width: 140px;">
+					</div>
+					<div class="col-md-7">
+						<h1 class="title-form-application">Solicitação de Contratação de Pessoal</h1>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-danger" id="panel_inf_candidato">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<a class="collapse-icon up" data-toggle="collapse"
+							href="#colapse_inf_candidato">Informações do candidato
+						</a>
+					</h3>
+				</div>
+				<div id='colapse_inf_candidato' class='panel-collapse collapse in'>
+					<div class="row panel-body">
+						<div class="col-md-4">
+							<label for="nome" class="nome">Candidato contratado</label>
+							<input type="text" class="form-control" name="nome_candidado">
+						</div>
+						<div class="col-md-1"></div>
+						<div class="col-md-2">
+							<label for="data_inicio" class="data_inicio">Data de inicio</label>
+							<input type="text" class="form-control" mask="00/00/0000" name="data_inicio">
+						</div>
+						<div class="col-md-1"></div>
+						<div class="col-md-3">
+							<label for="setor_solicitante" class="setor_solicitante">Nome/Setor do solicitante</label>
+							<input type="text" class="form-control" name="setor_solicitante">
+						</div>
+					</div>
+				</div>
+			</div>
+				<div class="panel panel-danger">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<a class="collapse-icon up" data-toggle="collapse" href="#colapse_inf_vaga">Informações da vaga
+							</a>
+						</h3>
+					</div>
+					<div id='colapse_inf_vaga' class='panel-collapse collapse in'>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-3">
+									<label for="setor">Setor</label>
+									<input type="text" class="form-control" name="setor">
+								</div>
+								<div class="col-md-3">
+									<label for="cargo_funcao">Cargo/Função</label>
+									<input type="text" class="form-control" name="cargo_funcao">
+								</div>
+								<div class="col-md-3">
+									<label for="salario">Salário</label>
+									<input type="text" class="moeda form-control" name="salario">
+								</div>
+							</div>
+							<br>
+
+							<div class="row">
+								<div class="col-md-3">
+									<label for="motivo_contrat">Motivo da Contratação</label>
+									<textarea name="motivo" class="form-control" id="motivo_contrat" rows="4"></textarea>
+								</div>
+								<div class="col-md-2">
+									<label for="vinculo">Vínculo</label>
+									<div class="custom-radio custom-radio-success">
+										<input type="radio" name="radiotypes1" value="estagio" id="radio_estagio">
+										<label for="radio_estagio">Estágio</label>
+									</div>
+									<div class="custom-radio custom-radio-success">
+										<input type="radio" name="radiotypes1" value="temporario" id="radio_temporario">
+										<label for="radio_temporario">Temporário</label>
+									</div>
+									<div class="custom-radio custom-radio-success">
+										<input type="radio" name="radiotypes1" value="efetivo" id="radio_efetivo">
+										<label for="radio_efetivo">Efetivo</label>
+									</div>
+									<div class="custom-radio custom-radio-success">
+										<input type="radio" name="radiotypes1" value="diarista" id="radio_diarista">
+										<label for="radio_diarista">Diarista</label>
+									</div>
+								</div>
+								<div class="tipo_recrut col-md-3">
+									<label for="tipo_recrutamento">Tipo de Recrutamento</label>
+									<div class="custom-radio custom-radio-success ">
+										<input type="radio" name="radiotypes2" value="interno" id="radio_interno" onchange="liberarCampoRecrut()">
+										<label for="radio_interno">Interno</label>
+									</div>
+									<div class="custom-radio custom-radio-success ">
+										<input type="radio" name="radiotypes2" value="externo" id="radio_externo" onchange="liberarCampoRecrut()">
+										<label for="radio_externo">Externo</label>
+										<input type="text" class="form-control" name="externo" id="externo">
+									</div>
+									<div class="custom-radio custom-radio-success ">
+										<input type="radio" name="radiotypes2" value="indicacao" id="radio_indicacao" onchange="liberarCampoRecrut()">
+										<label for="radio_indicacao">Indicação</label>
+										<input type="text" class="form-control" name="indicacao" id="indicacao">
+									</div>
+								</div>
+								<div class="col-md-2">
+									<label for="tipo_recrutamento">Tipo de Vaga</label>
+									<div class="custom-radio custom-radio-success ">
+										<input type="radio" name="radiotypes3" value="interno" id="radio_novavaga" onchange="liberarCampoTipoVaga()">
+										<label for="radio_novavaga">Nova Vaga</label>
+									</div>
+									<div class="custom-radio custom-radio-success ">
+										<input type="radio" name="radiotypes3" value="interno" id="radio_substituicao" onchange="liberarCampoTipoVaga()">
+										<label for="radio_substituicao">Substituição</label>
+										<input type="text" class="form-control" name="substituicao" id="substituicao">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<label for="observ_geral">Observações Gerais</label>
+									<textarea name="observ_geral" class="form-control" id="observ_geral" rows="4"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-danger" id="panel_process_selec">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<a class="collapse-icon up" data-toggle="collapse"
+								href="#colapse_process_selec">Processo de Seleção
+							</a>
+						</h3>
+					</div>
+					<div id='colapse_process_selec' class='panel-collapse collapse in'>
+						<div class="row panel-body">
+							<div class="col-md-3">
+								<div class="custom-checkbox custom-checkbox-success">
+									<input type="checkbox" name="radio1" value="anuncio_agenc" id="radio_anuncio">
+									<label for="radio_anuncio">Anúncio em agência</label>
+								</div>
+								<div class="custom-checkbox custom-checkbox-success">
+									<input type="checkbox" name="radio2" value="redacao" id="radio_redacao">
+									<label for="radio_redacao">Redação</label>
+								</div>
+								<div class="custom-checkbox custom-checkbox-success">
+									<input type="checkbox" name="radio3" value="quest" id="radio_quest">
+									<label for="radio_quest">Questionário especifico do setor</label>
+								</div>
+								<div class="custom-checkbox custom-checkbox-success">
+									<input type="checkbox" name="radio4" value="entrevista" id="radio_entrevista">
+									<label for="radio_entrevista">Entrevista</label>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="custom-checkbox custom-checkbox-success">
+									<input type="checkbox" name="radio5" value="teste_pisc" id="radio_teste_pisc">
+									<label for="radio_teste_pisc">Teste - Psicólogo</label>
+								</div>
+								<div class="custom-checkbox custom-checkbox-success">
+									<input type="checkbox" name="radio6" value="hist_escol" id="radio_hsit_escol">
+									<label for="radio_hsit_escol">Histórico Escolar</label>
+								</div>
+								<div class="custom-checkbox custom-checkbox-success">
+									<input type="checkbox" name="radio7" value="video" id="radio_video">
+									<label for="radio_video">Video</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-danger" id="panel_aprov">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<a class="collapse-icon up" data-toggle="collapse"
+								href="#colapse_aprov">Aprovações
+							</a>
+						</h3>
+					</div>
+					<div id='colapse_aprov' class='panel-collapse collapse in'>
+						<div class="row panel-body">
+							<div class="col-md-3">
+								<label>Aprovação - Cleber Horn</label>
+								<select name="aprovacao" id="aprovacao" class="form-control">
+									<option>Selecione</option>
+									<option>Aprovado</option>
+									<option>Recusado</option>
+								</select>
+								<br>
+								<h5>Obs. Aprovador</h5>
+								<textarea class="form-control" rows="1" id="obs_aprov" name="obs_aprov1"></textarea>
+							</div>
+							<div class="col-md-1"></div>
+							<div class="col-md-3">
+								<label>Aprovação - Vandeli dos Santos</label>
+								<select name="aprovacao2" id="aprovacao2" class="form-control">
+									<option>Selecione</option>
+									<option>Aprovado</option>
+									<option>Recusado</option>
+								</select>
+								<br>
+								<h5>Obs. Aprovador</h5>
+								<textarea class="form-control" rows="1" id="obs_aprov" name="obs_aprov2"></textarea>
+							</div>
+							<div class="col-md-1"></div>
+							<div class="col-md-3">
+								<label>Aprovação - Fabio Cierro</label>
+								<select name="aprovacao3" id="aprovacao3" class="form-control">
+									<option>Selecione</option>
+									<option>Aprovado</option>
+									<option>Recusado</option>
+								</select>
+								<br>
+								<h5>Obs. Aprovador</h5>
+								<textarea class="form-control" rows="1" id="obs_aprov" name="obs_aprov3"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="jquery.mask.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="custom.js"></script>
+</body>
+
+</html>
