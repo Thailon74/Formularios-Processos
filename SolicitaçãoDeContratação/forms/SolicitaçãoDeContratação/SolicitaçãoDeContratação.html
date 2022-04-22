@@ -8,6 +8,14 @@
 	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
 	<script type="text/javascript" src="/webdesk/vcXMLRPC.js" charset="utf-8"></script>
 
+		<!-- CUSTOM -->
+		<link href="/style-guide/css/fluig-style-guide-filter.min.css" rel="stylesheet" type="text/css">
+		<link href="/style-guide/css/fluig-style-guide-ratingstars.min.css" rel="stylesheet" type="text/css">
+		<script src="/style-guide/js/fluig-style-guide-filter.min.js"></script>
+		<script src="/style-guide/js/fluig-style-guide-ratingstars.min.js"></script>
+	
+		<link href='/webdesk/customresources?cid=1&resourceName=temaFormulario/1.css' type='text/css' rel='stylesheet' />
+
 </head>
 
 <body>
@@ -35,17 +43,17 @@
 					<div class="row panel-body">
 						<div class="col-md-4">
 							<label for="nome" class="nome">Candidato contratado</label>
-							<input type="text" class="form-control" name="nome_candidado">
+							<input type="text" class="form-control" name="nome_candidato" id="nome_candidato">
 						</div>
 						<div class="col-md-1"></div>
 						<div class="col-md-2">
 							<label for="data_inicio" class="data_inicio">Data de inicio</label>
-							<input type="text" class="form-control" mask="00/00/0000" name="data_inicio">
+							<input type="text" class="form-control" mask="00/00/0000" name="data_inicio" id="data_inicio">
 						</div>
 						<div class="col-md-1"></div>
 						<div class="col-md-3">
 							<label for="setor_solicitante" class="setor_solicitante">Nome/Setor do solicitante</label>
-							<input type="text" class="form-control" name="setor_solicitante">
+							<input type="text" class="form-control" name="setor_solicitante" id="setor_solicitante">
 						</div>
 					</div>
 				</div>
@@ -62,15 +70,15 @@
 							<div class="row">
 								<div class="col-md-3">
 									<label for="setor">Setor</label>
-									<input type="text" class="form-control" name="setor">
+									<input type="text" class="form-control" name="setor" id="setor">
 								</div>
 								<div class="col-md-3">
 									<label for="cargo_funcao">Cargo/Função</label>
-									<input type="text" class="form-control" name="cargo_funcao">
+									<input type="text" class="form-control" name="cargo_funcao" id="cargo_funcao">
 								</div>
 								<div class="col-md-3">
 									<label for="salario">Salário</label>
-									<input type="text" class="moeda form-control" name="salario">
+									<input type="text" class="moeda form-control" name="salario" id="salario">
 								</div>
 							</div>
 							<br>
@@ -78,7 +86,7 @@
 							<div class="row">
 								<div class="col-md-3">
 									<label for="motivo_contrat">Motivo da Contratação</label>
-									<textarea name="motivo" class="form-control" id="motivo_contrat" rows="4"></textarea>
+									<textarea name="motivo_contrat" class="form-control" id="motivo_contrat" rows="4"></textarea>
 								</div>
 								<div class="col-md-2">
 									<label for="vinculo">Vínculo</label>
@@ -195,38 +203,38 @@
 						<div class="row panel-body">
 							<div class="col-md-3">
 								<label>Aprovação - Cleber Horn</label>
-								<select name="aprovacao" id="aprovacao" class="form-control">
-									<option>Selecione</option>
-									<option>Aprovado</option>
-									<option>Recusado</option>
+								<select name="aprovacao1" id="aprovacao1" class="form-control">
+									<option value="">Selecione</option>
+									<option value="aprovado">Aprovado</option>
+									<option value="recusado">Recusado</option>
 								</select>
 								<br>
 								<h5>Obs. Aprovador</h5>
-								<textarea class="form-control" rows="1" id="obs_aprov" name="obs_aprov1"></textarea>
+								<textarea class="form-control" rows="1" id="obs_aprov1" name="obs_aprov1"></textarea>
 							</div>
 							<div class="col-md-1"></div>
 							<div class="col-md-3">
 								<label>Aprovação - Vandeli dos Santos</label>
 								<select name="aprovacao2" id="aprovacao2" class="form-control">
-									<option>Selecione</option>
-									<option>Aprovado</option>
-									<option>Recusado</option>
+									<option value="">Selecione</option>
+									<option value="aprovado">Aprovado</option>
+									<option value="recusado">Recusado</option>
 								</select>
 								<br>
 								<h5>Obs. Aprovador</h5>
-								<textarea class="form-control" rows="1" id="obs_aprov" name="obs_aprov2"></textarea>
+								<textarea class="form-control" rows="1" id="obs_aprov2" name="obs_aprov2"></textarea>
 							</div>
 							<div class="col-md-1"></div>
 							<div class="col-md-3">
 								<label>Aprovação - Fabio Cierro</label>
 								<select name="aprovacao3" id="aprovacao3" class="form-control">
-									<option>Selecione</option>
-									<option>Aprovado</option>
-									<option>Recusado</option>
+									<option value="">Selecione</option>
+									<option value="aprovado">Aprovado</option>
+									<option value="recusado">Recusado</option>
 								</select>
 								<br>
 								<h5>Obs. Aprovador</h5>
-								<textarea class="form-control" rows="1" id="obs_aprov" name="obs_aprov3"></textarea>
+								<textarea class="form-control" rows="1" id="obs_aprov3" name="obs_aprov3"></textarea>
 							</div>
 						</div>
 					</div>

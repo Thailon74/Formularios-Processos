@@ -1,1 +1,0 @@
-function validateForm(form) {		var activity = getValue('WKNumState');if ((form.getValue("text_justificat") == null || form.getValue("text_justificat") ==  "") && ( getValue('WKNumProces') == null || (getValue('WKNumProces') > 0 && getValue('WKCompletTask') == 'true') )) {throw "Justificativa n\u00E3o pode ser vazio.";}}

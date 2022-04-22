@@ -1,0 +1,28 @@
+function displayFields(form, customHTML) { 
+    var atividadeAtual = getValue('WKNumState')
+
+    form.setEnabled('aprovador', false)
+    form.setEnabled('tituloSA', false)
+    form.setEnabled('teste_ds_itens', false)
+    form.setEnabled('descAlteracao', false)
+    form.setEnabled('text_justificat', false)
+    form.setEnabled('text_com_aprov',false)
+    form.setEnabled('text_com_exec',false)
+   
+
+    if (atividadeAtual == '19') { //começo
+    form.setEnabled('aprovador',true)
+    form.setEnabled('tituloSA', true)
+    form.setEnabled('teste_ds_itens', true)
+    form.setEnabled('descAlteracao', true)
+    form.setEnabled('text_justificat', true)
+ 
+    }
+    
+    if (atividadeAtual == '5') { //aprovador
+        
+        form.setEnabled('text_com_aprov',false)
+        form.setEnabled('text_com_exec',false)
+
+    }
+}

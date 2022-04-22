@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_202" class="java.beans.XMLDecoder">
+ <object class="java.util.HashMap">
+  <void method="put">
+   <string>volume</string>
+   <array class="java.lang.String" length="1">
+    <void index="0">
+     <string>Default</string>
+    </void>
+   </array>
+  </void>
+  <void method="put">
+   <string>mecanismoGrupo</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Tecnologia da Informação</string>
+      </void>
+      <void property="groupId">
+       <string>TI</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Usuários com acesso a Lixeira</string>
+      </void>
+      <void property="groupId">
+       <string>SEG_ACESSO_LIXEIRA</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Acesso ao Menu Documentos</string>
+      </void>
+      <void property="groupId">
+       <string>SEG_ACESSO_DOCUMENTOS</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Acesso ao menu de Processos</string>
+      </void>
+      <void property="groupId">
+       <string>SEG_ACESSO_PROCESSOS</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>RECEBIMENTO</string>
+      </void>
+      <void property="groupId">
+       <string>RECEBIMENTO</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>RMA</string>
+      </void>
+      <void property="groupId">
+       <string>RMA</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>EXPEDIÇÃO</string>
+      </void>
+      <void property="groupId">
+       <string>EXPEDICAO</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Gestores RMA</string>
+      </void>
+      <void property="groupId">
+       <string>GESTOR_RMA</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Pesquisa e desenvolvimento</string>
+      </void>
+      <void property="groupId">
+       <string>P&amp;D</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Suprimentos</string>
+      </void>
+      <void property="groupId">
+       <string>SUPRIMENTOS</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Controladoria</string>
+      </void>
+      <void property="groupId">
+       <string>CONTROLADORIA</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Financeiro</string>
+      </void>
+      <void property="groupId">
+       <string>FINANCEIRO</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Moderator group Líderes Parks</string>
+      </void>
+      <void property="groupId">
+       <string>MODERATOR_lideres-parks</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Member group Líderes Parks</string>
+      </void>
+      <void property="groupId">
+       <string>MEMBER_lideres-parks</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Moderator group Treinamento Fluig</string>
+      </void>
+      <void property="groupId">
+       <string>MODERATOR_treinamento-fluig</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Member group Treinamento Fluig</string>
+      </void>
+      <void property="groupId">
+       <string>MEMBER_treinamento-fluig</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo de aprovadores da TI</string>
+      </void>
+      <void property="groupId">
+       <string>AprovadorTI</string>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>expediente</string>
+   <array class="java.lang.String" length="2">
+    <void index="0">
+     <string>Default</string>
+    </void>
+    <void index="1">
+     <string>DIRETORIA</string>
+    </void>
+   </array>
+  </void>
+  <void method="put">
+   <string>camposFormulario, documentoId = 80</string>
+   <array class="java.lang.String" length="23">
+    <void index="0">
+     <string>aprovador</string>
+    </void>
+    <void index="1">
+     <string>checkbox30</string>
+    </void>
+    <void index="2">
+     <string>checkbox31</string>
+    </void>
+    <void index="3">
+     <string>checkbox32</string>
+    </void>
+    <void index="4">
+     <string>checkbox33</string>
+    </void>
+    <void index="5">
+     <string>checkbox34</string>
+    </void>
+    <void index="6">
+     <string>checkbox35</string>
+    </void>
+    <void index="7">
+     <string>checkbox36</string>
+    </void>
+    <void index="8">
+     <string>checkbox50</string>
+    </void>
+    <void index="9">
+     <string>checkbox51</string>
+    </void>
+    <void index="10">
+     <string>checkbox52</string>
+    </void>
+    <void index="11">
+     <string>checkbox53</string>
+    </void>
+    <void index="12">
+     <string>checkbox54</string>
+    </void>
+    <void index="13">
+     <string>checkbox55</string>
+    </void>
+    <void index="14">
+     <string>descAlteracao</string>
+    </void>
+    <void index="15">
+     <string>hidden_aprovador</string>
+    </void>
+    <void index="16">
+     <string>radio_par_aprov</string>
+    </void>
+    <void index="17">
+     <string>radio_par_exec</string>
+    </void>
+    <void index="18">
+     <string>teste_ds_itens</string>
+    </void>
+    <void index="19">
+     <string>text_com_aprov</string>
+    </void>
+    <void index="20">
+     <string>text_com_exec</string>
+    </void>
+    <void index="21">
+     <string>text_justificat</string>
+    </void>
+    <void index="22">
+     <string>tituloSA</string>
+    </void>
+   </array>
+  </void>
+  <void method="put">
+   <string>mecanismo</string>
+   <array class="[Ljava.lang.Object;" length="10">
+    <void index="0">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Associação</string>
+      </void>
+      <void index="1">
+       <string>Associado</string>
+      </void>
+     </array>
+    </void>
+    <void index="1">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Campo de Formulário</string>
+      </void>
+      <void index="1">
+       <string>Campo Formulário</string>
+      </void>
+     </array>
+    </void>
+    <void index="2">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Executor de Atividade</string>
+      </void>
+      <void index="1">
+       <string>Executor Atividade</string>
+      </void>
+     </array>
+    </void>
+    <void index="3">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Grupo</string>
+      </void>
+      <void index="1">
+       <string>Grupo</string>
+      </void>
+     </array>
+    </void>
+    <void index="4">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Grupos do Colaborador</string>
+      </void>
+      <void index="1">
+       <string>Grupos Colaborador</string>
+      </void>
+     </array>
+    </void>
+    <void index="5">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Papel</string>
+      </void>
+      <void index="1">
+       <string>Papel</string>
+      </void>
+     </array>
+    </void>
+    <void index="6">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição para um Grupo</string>
+      </void>
+      <void index="1">
+       <string>Pool Grupo</string>
+      </void>
+     </array>
+    </void>
+    <void index="7">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição para um Papel</string>
+      </void>
+      <void index="1">
+       <string>Pool Papel</string>
+      </void>
+     </array>
+    </void>
+    <void index="8">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>PorGestorProcesso</string>
+      </void>
+      <void index="1">
+       <string>PorGestorProcesso</string>
+      </void>
+     </array>
+    </void>
+    <void index="9">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Usuário</string>
+      </void>
+      <void index="1">
+       <string>Usuário</string>
+      </void>
+     </array>
+    </void>
+   </array>
+  </void>
+ </object>
+</java>

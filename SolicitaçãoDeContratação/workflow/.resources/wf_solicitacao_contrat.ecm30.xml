@@ -28,7 +28,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Solicitação de Contratação de Pessoal</processId>
-      <version>4</version>
+      <version>6</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>296</formId>
@@ -103,8 +103,8 @@
         <version>1</version>
         <sequence>11</sequence>
       </processStatePK>
-      <stateName>Aprovador 1</stateName>
-      <stateDescription>Aprovador 1</stateDescription>
+      <stateName>Aprovação 01</stateName>
+      <stateDescription>Aprovação 01</stateDescription>
       <instruction></instruction>
       <deadlineTime>0</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
@@ -155,8 +155,8 @@
         <version>1</version>
         <sequence>12</sequence>
       </processStatePK>
-      <stateName>Aprovador 2</stateName>
-      <stateDescription>Aprovador 2</stateDescription>
+      <stateName>Aprovação 02</stateName>
+      <stateDescription>Aprovação 02</stateDescription>
       <instruction></instruction>
       <deadlineTime>0</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
@@ -207,8 +207,8 @@
         <version>1</version>
         <sequence>13</sequence>
       </processStatePK>
-      <stateName>Aprovador 3</stateName>
-      <stateDescription>Aprovador 3</stateDescription>
+      <stateName>Aprovação 03</stateName>
+      <stateDescription>Aprovação 03</stateDescription>
       <instruction></instruction>
       <deadlineTime>0</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
@@ -345,7 +345,7 @@
       <formFolder>0</formFolder>
       <automatic>false</automatic>
       <positionX>640</positionX>
-      <positionY>208</positionY>
+      <positionY>207</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>4</stateType>
       <bpmnType>127</bpmnType>
@@ -612,10 +612,37 @@ process.instructions=&#xd;
       <processFormFieldPK>
         <companyId>1</companyId>
         <processId>wf_solicitacao_contrat</processId>
+        <fieldId>aprovacao</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>aprovacao</fieldDescription>
+      <slotId>1</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>wf_solicitacao_contrat</processId>
+        <fieldId>aprovacao2</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>aprovacao2</fieldDescription>
+      <slotId>2</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>wf_solicitacao_contrat</processId>
+        <fieldId>aprovacao3</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>aprovacao3</fieldDescription>
+      <slotId>3</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>wf_solicitacao_contrat</processId>
         <fieldId>cargo_funcao</fieldId>
       </processFormFieldPK>
       <fieldDescription>cargo_funcao</fieldDescription>
-      <slotId>1</slotId>
+      <slotId>4</slotId>
     </ProcessFormField>
     <ProcessFormField>
       <processFormFieldPK>
@@ -624,7 +651,7 @@ process.instructions=&#xd;
         <fieldId>data_inicio</fieldId>
       </processFormFieldPK>
       <fieldDescription>data_inicio</fieldDescription>
-      <slotId>2</slotId>
+      <slotId>5</slotId>
     </ProcessFormField>
     <ProcessFormField>
       <processFormFieldPK>
@@ -633,7 +660,7 @@ process.instructions=&#xd;
         <fieldId>externo</fieldId>
       </processFormFieldPK>
       <fieldDescription>externo</fieldDescription>
-      <slotId>3</slotId>
+      <slotId>6</slotId>
     </ProcessFormField>
     <ProcessFormField>
       <processFormFieldPK>
@@ -642,7 +669,7 @@ process.instructions=&#xd;
         <fieldId>indicacao</fieldId>
       </processFormFieldPK>
       <fieldDescription>indicacao</fieldDescription>
-      <slotId>4</slotId>
+      <slotId>7</slotId>
     </ProcessFormField>
     <ProcessFormField>
       <processFormFieldPK>
@@ -651,7 +678,7 @@ process.instructions=&#xd;
         <fieldId>motivo</fieldId>
       </processFormFieldPK>
       <fieldDescription>motivo</fieldDescription>
-      <slotId>5</slotId>
+      <slotId>8</slotId>
     </ProcessFormField>
     <ProcessFormField>
       <processFormFieldPK>
@@ -660,16 +687,25 @@ process.instructions=&#xd;
         <fieldId>nome_candidado</fieldId>
       </processFormFieldPK>
       <fieldDescription>nome_candidado</fieldDescription>
-      <slotId>6</slotId>
+      <slotId>9</slotId>
     </ProcessFormField>
     <ProcessFormField>
       <processFormFieldPK>
         <companyId>1</companyId>
         <processId>wf_solicitacao_contrat</processId>
-        <fieldId>radiotypes</fieldId>
+        <fieldId>radiotypes2</fieldId>
       </processFormFieldPK>
-      <fieldDescription>radiotypes</fieldDescription>
-      <slotId>7</slotId>
+      <fieldDescription>radiotypes2</fieldDescription>
+      <slotId>10</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>wf_solicitacao_contrat</processId>
+        <fieldId>radiotypes3</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>radiotypes3</fieldDescription>
+      <slotId>11</slotId>
     </ProcessFormField>
     <ProcessFormField>
       <processFormFieldPK>
@@ -678,7 +714,7 @@ process.instructions=&#xd;
         <fieldId>salario</fieldId>
       </processFormFieldPK>
       <fieldDescription>salario</fieldDescription>
-      <slotId>8</slotId>
+      <slotId>12</slotId>
     </ProcessFormField>
     <ProcessFormField>
       <processFormFieldPK>
@@ -687,7 +723,7 @@ process.instructions=&#xd;
         <fieldId>setor</fieldId>
       </processFormFieldPK>
       <fieldDescription>setor</fieldDescription>
-      <slotId>9</slotId>
+      <slotId>13</slotId>
     </ProcessFormField>
     <ProcessFormField>
       <processFormFieldPK>
@@ -696,7 +732,7 @@ process.instructions=&#xd;
         <fieldId>setor_solicitante</fieldId>
       </processFormFieldPK>
       <fieldDescription>setor_solicitante</fieldDescription>
-      <slotId>10</slotId>
+      <slotId>14</slotId>
     </ProcessFormField>
     <ProcessFormField>
       <processFormFieldPK>
@@ -705,7 +741,7 @@ process.instructions=&#xd;
         <fieldId>substituicao</fieldId>
       </processFormFieldPK>
       <fieldDescription>substituicao</fieldDescription>
-      <slotId>11</slotId>
+      <slotId>15</slotId>
     </ProcessFormField>
   </list>
   <list/>

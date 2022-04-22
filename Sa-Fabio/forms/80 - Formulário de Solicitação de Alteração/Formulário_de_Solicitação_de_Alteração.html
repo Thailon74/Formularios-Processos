@@ -24,6 +24,9 @@
 
 	<form class="totvs-form grid vertical create-form-components ui-sortable t0" name="createFormComponents"
 		style="padding-left: 10px; padding-right: 10px;">
+		<!--Campos Ocultos-->
+		<input type="hidden" name="atividade_atual" id="atividade_atual" value="0">
+
 		<h1 class="title-form-application">Formulário de Solicitação de Alteração</h1>
 		<div class="paragraph-is-required system-message-information alert alert-info" role="alert">Todos os campos com
 			* são de preenchimento obrigatório.</div>
@@ -33,7 +36,7 @@
 				<div class="form-group">
 					<label for="zoom">Selecione o aprovador da SA</label>
 					<div class="input-group">
-						<input type="zoom" class="form-control" name="aprovador"
+						<input type="zoom" class="form-control" name="aprovador" id="aprovador"
 							dataset="colleague" zoomvalue="colleagueId" datasetvalue="colleagueName"
 							data-zoom="{'displayKey':'colleagueName','datasetId':'colleague','fields':[{'field':'colleagueName','label':'colleagueName','standard':true}]}">
 						<div class="input-group-addon zoom-preview">
@@ -48,7 +51,7 @@
 			<div class="form-input">
 				<div class="form-group"><label>Título da SA</label><span
 						class="required text-danger"><strong>*</strong></span><input type="text" class="form-control"
-						name="tituloSA" value=""
+						name="tituloSA" id="tituloSA" value=""
 						placeholder="Digite um título que dê uma indicação de qual produto e qual alteração a solicitação se refere"
 						data-size="big" required="required"></div>
 			</div>
@@ -84,27 +87,27 @@
 			<div class="form-input">
 				<div class="form-group"><label>Descrição da Alteração</label><span
 						class="required text-danger"><strong>*</strong></span><textarea class="form-control" rows="3"
-						name="descAlteracao" placeholder="" data-size="big" required="required"></textarea></div>
+						name="descAlteracao" id="descAlteracao" placeholder="" data-size="big" required="required"></textarea></div>
 			</div>
 		</div>
 		<div class="form-field" data-type="checkbox" data-show-properties="" data-field-name="motivocheck">
 			<div class="form-input">
 				<div class="form-group"><label>Motivo</label>
 					<div class="check-options">
-						<div class="checkbox"><label><input type="checkbox" name="checkbox30"
-									value="Correção">Correção</label></div>
-						<div class="checkbox"><label><input type="checkbox" name="checkbox31"
-									value="Melhoria">Melhoria</label></div>
-						<div class="checkbox"><label><input type="checkbox" name="checkbox32"
-									value="Redução de Custos">Redução de Custos</label></div>
-						<div class="checkbox"><label><input type="checkbox" name="checkbox33"
-									value="Suprimentos">Suprimentos</label></div>
-						<div class="checkbox"><label><input type="checkbox" name="checkbox34"
-									value="Processos">Processos</label></div>
-						<div class="checkbox"><label><input type="checkbox" name="checkbox35"
-									value="Documentação">Documentação</label></div>
-						<div class="checkbox"><label><input type="checkbox" name="checkbox36"
-									value="Outros">Outros</label></div>
+						<div class="checkbox"><label><input type="checkbox" name="checkbox30" id="checkbox30"
+									value="SIM">Correção</label></div>
+						<div class="checkbox"><label><input type="checkbox" name="checkbox31" id="checkbox31"
+									value="SIM">Melhoria</label></div>
+						<div class="checkbox"><label><input type="checkbox" name="checkbox32" id="checkbox32"
+									value="SIM">Redução de Custos</label></div>
+						<div class="checkbox"><label><input type="checkbox" name="checkbox33" id="checkbox33"
+									value="SIM">Suprimentos</label></div>
+						<div class="checkbox"><label><input type="checkbox" name="checkbox34" id="checkbox34"
+									value="SIM">Processos</label></div>
+						<div class="checkbox"><label><input type="checkbox" name="checkbox35" id="checkbox35"
+									value="SIM">Documentação</label></div>
+						<div class="checkbox"><label><input type="checkbox" name="checkbox36" id="checkbox36"
+									value="SIM">Outros</label></div>
 					</div>
 				</div>
 			</div>
@@ -114,7 +117,7 @@
 			<div class="form-input">
 				<div class="form-group"><label>Justificativa</label><span
 						class="required text-danger"><strong>*</strong></span><textarea class="form-control" rows="3"
-						name="text_justificat"
+						name="text_justificat" id="text_justificat"
 						placeholder="Insira aqui a razão para essa alteração estar sendo solicitada. Que problema ela resolve?"
 						data-size="big" required="required"></textarea></div>
 			</div>
@@ -159,7 +162,7 @@
 			style="position: relative; left: 0px; top: 0px;">
 			<div class="form-input">
 				<div class="form-group"><label>Comentários do aprovador</label><input type="text" class="form-control"
-						name="text_com_aprov" value=""
+						name="text_com_aprov" id="text_com_aprov" value=""
 						placeholder="Em caso de revisão ou reprovação, insira aqui o motivo." data-size="big"></div>
 			</div>
 		</div>
@@ -179,123 +182,11 @@
 			style="position: relative; left: 0px; top: 0px;">
 			<div class="form-input">
 				<div class="form-group"><label>Comentários do executor</label><input type="text" class="form-control"
-						name="text_com_exec" value="" placeholder="" data-size="big"></div>
+						name="text_com_exec" id="text_com_exec" value="" placeholder="" data-size="big"></div>
 			</div>
 		</div>
 	</form>
-
-
-	<script type="text/javascript">
-	
-		var keyDown = false, ctrl = 17, vKey = 86, Vkey = 118;
-
-		$(document).keydown(function (e) {
-			if (e.keyCode == ctrl) keyDown = true;
-		}).keyup(function (e) {
-			if (e.keyCode == ctrl) keyDown = false;
-		});
-
-		$('[data-only-numbers]').on('keypress', function (e) {
-			if (!e) {
-				var e = window.event;
-			}
-
-			if (e.keyCode > 0 && e.which == 0) {
-				return true;
-			}
-
-			if (e.keyCode) {
-				code = e.keyCode;
-			} else if (e.which) {
-				code = e.which;
-			}
-
-			if (code == 46) {
-				return true;
-			}
-
-			var character = String.fromCharCode(code);
-			if (character == '\b' || character == ' ' || character == '\t') {
-				return true;
-			}
-			if (keyDown && (code == vKey || code == Vkey)) {
-				return (character);
-			} else {
-				return (/[0-9]$/.test(character));
-			}
-		}).on('focusout', function (e) {
-			var $this = $(this);
-			if ($this.val() == "") {
-				return true;
-			}
-			$this.val($this.val().replace(/[^0-9\.]/g, ''));
-		}).on('paste', function (e) {
-			var $this = $(this);
-			setTimeout(function () {
-				$this.val($this.val().replace(/[^0-9\.]/g, ''));
-			}, 5);
-		});
-
-
-
-		$('.create-form-components').on('keyup', 'input[required="required"][type="text"], input[required="required"][type="number"], input[required="required"][type="date"], textarea[required="required"]', function () {
-			validationFieldsForm($(this), $(this).parents('.form-field').data('type'));
-		});
-
-		$('.create-form-components').on('change', 'input[required="required"][type="checkbox"], input[required="required"][type="radio"], select[required="required"]', function () {
-			validationFieldsForm($(this), $(this).parents('.form-field').data('type'));
-		});
-
-		function validationFieldsForm(field, type) {
-			if (type === "checkbox" || type === "radio") {
-				if (!field.is(':checked')) {
-					field.parents('.form-field').addClass('required');
-				} else {
-					field.parents('.form-field').removeClass('required');
-				}
-			} else {
-				if (!field.val().trim()) {
-					field.parents('.form-field').addClass('required');
-				} else {
-					field.parents('.form-field').removeClass('required');
-				}
-			}
-		}
-
-		var $zoomPreview = $(".zoom-preview");
-		if ($zoomPreview.length) {
-			$zoomPreview.parent().removeClass("input-group");
-			$zoomPreview.remove();
-		}
-
-		var ratings = $(".rating");
-		if (ratings.length > 0) ratingStars(ratings);
-		function ratingStars(stars) {
-			$.each(stars, function (i, obj) {
-				var field = $(this).closest(".form-group").find(".rating-value");
-				var tgt = $(obj);
-				tgt.html("");
-				var rating = FLUIGC.stars(tgt, { value: field.val() });
-				rating.on("click", function (o) {
-					field.val($(this).index() + 1);
-				});
-			});
-		}
-
-		$.each($("[data-date]"), function (i, o) {
-			var id = $(o).attr("id");
-			FLUIGC.calendar("#" + id);
-		});
-
-		$(document).ready(function () {
-			$.each($("[data-date]"), function (i, o) {
-				var id = $(o).attr("id");
-				if ($("#" + id).attr("readonly")) {
-					$("#" + id).data('DateTimePicker').disable();
-				}
-			});
-		});
-	</script>
+	<script type="text/javascript" src="Custom.js"></script>
 </body>
 
 </html>
